@@ -1,0 +1,6 @@
+@import url('https://jaybulb.com/tokens.css');
+
+/* Brand serif for headlines (scripts/gen_font.py). Interface text stays on the system font. */
+@font-face { font-family: "Temida Serif"; src: url("fonts/TemidaSerif-Regular.woff2") format("woff2"); font-weight: 400; font-display: swap; }
+@font-face { font-family: "Temida Serif"; src: url("fonts/TemidaSerif-Semibold.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+:root { --font-display: "Temida Serif", "New York", ui-serif, Georgia, serif; }

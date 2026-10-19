@@ -1,0 +1,3 @@
+Show HN: Temida – organize your own court case without a lawyer
+
+I represented myself in a court case and the hardest part wasn't the law, it was keeping the paper straight: grounds, witnesses, damages math, deadlines, and call scripts spread across notes apps and a folder that never made the right meeting. Temida puts all of it in one place, split into Case, Tasks, Money and Files tabs, synced across web, iPhone and Mac through one small API that scopes every row to its owner so each account only sees its own data. Face ID locks the iPhone app. It's free, live at temida.jaybulb.com and on the App Store. Not legal advice, just a place to keep your own case straight.

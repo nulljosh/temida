@@ -1,0 +1,1 @@
+../../../ios/Sources/Views/NoticeCardView.swift

@@ -1,0 +1,57 @@
+name: Temida
+options:
+  bundleIdPrefix: com.nulljosh
+  developmentLanguage: en
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MARKETING_VERSION: "1.1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: QMM486NPYC
+targets:
+  Temida:
+    type: application
+    platform: macOS
+    entitlements:
+      path: Temida.entitlements
+      properties:
+        com.apple.security.app-sandbox: true
+        com.apple.security.personal-information.calendars: true
+        com.apple.security.network.client: true
+        com.apple.developer.applesignin:
+          - Default
+    sources:
+      - Sources
+      - path: ../ios/Sources/Localizable.xcstrings
+        buildPhase: resources
+      - path: ../ios/Sources/InfoPlist.xcstrings
+        buildPhase: resources
+      - path: Assets.xcassets
+        buildPhase: resources
+      - path: ../Temida.icon
+        buildPhase: resources
+      - path: ../web/fonts/TemidaSerif-Semibold.ttf
+        buildPhase: resources
+    info:
+      path: Info.plist
+      properties:
+        ATSApplicationFontsPath: "."
+        CFBundleLocalizations: [en, fr, es, zh-Hans, zh-Hant, pa]
+        CFBundleShortVersionString: "$(MARKETING_VERSION)"
+        CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
+        ITSAppUsesNonExemptEncryption: false
+        NSRemindersFullAccessUsageDescription: "Temida adds the next steps you choose to Reminders."
+        NSCalendarsWriteOnlyAccessUsageDescription: "Temida adds the next steps you choose to your calendar."
+        CFBundleURLTypes:
+          - CFBundleURLName: com.nulljosh.brief
+            CFBundleURLSchemes:
+              - litigate
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.nulljosh.brief
+        CODE_SIGN_ENTITLEMENTS: Temida.entitlements
+        INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.productivity
+        ASSETCATALOG_COMPILER_APPICON_NAME: Temida
+        ENABLE_HARDENED_RUNTIME: YES

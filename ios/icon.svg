@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <rect width="200" height="200" rx="44" fill="#1c3d5a"/>
+  <!-- Pivot -->
+  <circle cx="100" cy="55" r="7" fill="#e8e4da"/>
+  <!-- Center pillar -->
+  <rect x="96.5" y="55" width="7" height="94" rx="3.5" fill="#e8e4da"/>
+  <!-- Beam -->
+  <rect x="34" y="68" width="132" height="7" rx="3.5" fill="#e8e4da"/>
+  <!-- Left chain -->
+  <rect x="43" y="75" width="5" height="32" rx="2.5" fill="#e8e4da"/>
+  <!-- Right chain -->
+  <rect x="152" y="75" width="5" height="32" rx="2.5" fill="#e8e4da"/>
+  <!-- Left pan bowl -->
+  <path d="M20 107 Q45 128 70 107" stroke="#e8e4da" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <line x1="20" y1="107" x2="70" y2="107" stroke="#e8e4da" stroke-width="5" stroke-linecap="round"/>
+  <!-- Right pan bowl (slightly lower = unbalanced, case still active) -->
+  <path d="M130 112 Q155 133 180 112" stroke="#e8e4da" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <line x1="130" y1="112" x2="180" y2="112" stroke="#e8e4da" stroke-width="5" stroke-linecap="round"/>
+  <!-- Base stem + foot -->
+  <rect x="84" y="149" width="32" height="6" rx="3" fill="#e8e4da"/>
+  <rect x="66" y="155" width="68" height="6" rx="3" fill="#e8e4da"/>
+</svg>

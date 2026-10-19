@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 460" font-family="-apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+  <rect width="820" height="460" fill="#ffffff"/>
+  <text x="40" y="48" font-size="20" font-weight="600" fill="#1d1d1f">Temida architecture</text>
+  <text x="40" y="70" font-size="13" fill="#6e6e73">Three clients, one account, one backend. Case content never ships in source.</text>
+
+  <g stroke="#c7c7cc" stroke-width="1.5" fill="none">
+    <path d="M160 186 V236 H410 V276"/>
+    <path d="M410 186 V276"/>
+    <path d="M670 186 V236 H410"/>
+    <path d="M410 356 V386"/>
+    <path d="M530 316 H580"/>
+  </g>
+
+  <g font-size="13" fill="#1d1d1f">
+    <rect x="40" y="96" width="240" height="90" rx="14" fill="#f5f5f7"/>
+    <text x="60" y="124" font-weight="600">Web</text>
+    <text x="60" y="146" fill="#6e6e73">Vanilla JS on Cloudflare Pages</text>
+    <text x="60" y="166" fill="#6e6e73">temida.jaybulb.com</text>
+
+    <rect x="290" y="96" width="240" height="90" rx="14" fill="#f5f5f7"/>
+    <text x="310" y="124" font-weight="600">iPhone</text>
+    <text x="310" y="146" fill="#6e6e73">SwiftUI, Face ID, Reminders</text>
+    <text x="310" y="166" fill="#6e6e73">CanLII search through a proxy</text>
+
+    <rect x="560" y="96" width="220" height="90" rx="14" fill="#f5f5f7"/>
+    <text x="580" y="124" font-weight="600">Mac</text>
+    <text x="580" y="146" fill="#6e6e73">SwiftUI sidebar, adds Lawyers</text>
+    <text x="580" y="166" fill="#6e6e73">shares models and some views</text>
+
+    <rect x="290" y="276" width="240" height="80" rx="14" fill="#2b3550"/>
+    <text x="310" y="304" font-weight="600" fill="#ffffff">jaybulb-api</text>
+    <text x="310" y="324" fill="#c9d1e3">Cloudflare Worker, api.jaybulb.com</text>
+    <text x="310" y="342" fill="#c9d1e3">sign-in, your rows only, photos</text>
+
+    <rect x="580" y="282" width="200" height="68" rx="14" fill="#f5f5f7"/>
+    <text x="600" y="310" font-weight="600">authmail</text>
+    <text x="600" y="330" fill="#6e6e73">reset and confirm email</text>
+
+    <rect x="290" y="386" width="240" height="48" rx="14" fill="#f5f5f7"/>
+    <text x="310" y="415" font-weight="600">D1</text>
+    <text x="336" y="415" fill="#6e6e73">accounts and brief tables</text>
+  </g>
+
+  <g font-size="12" fill="#6e6e73">
+    <text x="40" y="300">Signed out, the page is an</text>
+    <text x="40" y="318">empty shell. Signed in, your</text>
+    <text x="40" y="336">own rows fill it.</text>
+  </g>
+</svg>

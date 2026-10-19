@@ -1,0 +1,1 @@
+../../../ios/Sources/Views/CoverHeaderView.swift

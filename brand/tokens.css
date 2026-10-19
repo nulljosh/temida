@@ -1,0 +1,7 @@
+/* Temida brand tokens. The accent is the only colour this app owns; spacing, radii and type come from the shared system. */
+:root {
+  --accent: #2b3550;
+  --accent-light: #5c6b8a;
+  --accent-deep: #2b3550;
+  --accent-ring: color-mix(in srgb, #2b3550 30%, transparent);
+}

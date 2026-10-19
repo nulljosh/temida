@@ -1,0 +1,129 @@
+{
+  "sourceLanguage": "en",
+  "strings": {
+    "NSFaceIDUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida utilise Face ID pour protéger les données de votre dossier."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida usa Face ID para proteger los datos de tu caso."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida 使用 Face ID 来保护你的案件数据。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida 使用 Face ID 來保護你的案件資料。"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida ਤੁਹਾਡੇ ਕੇਸ ਦੇ ਡਾਟੇ ਦੀ ਸੁਰੱਖਿਆ ਲਈ Face ID ਵਰਤਦਾ ਹੈ।"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida uses Face ID to protect your case data."
+          }
+        }
+      }
+    },
+    "NSRemindersFullAccessUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida ajoute à Rappels les prochaines étapes que vous choisissez."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida añade a Recordatorios los siguientes pasos que elijas."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida 会把你选择的下一步添加到“提醒事项”。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida 會把你選擇的下一步加入「提醒事項」。"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida ਤੁਹਾਡੇ ਚੁਣੇ ਅਗਲੇ ਕਦਮ Reminders ਵਿੱਚ ਜੋੜਦਾ ਹੈ।"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida adds the next steps you choose to Reminders."
+          }
+        }
+      }
+    },
+    "NSCalendarsWriteOnlyAccessUsageDescription": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida ajoute à votre calendrier les prochaines étapes que vous choisissez."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida añade a tu calendario los siguientes pasos que elijas."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida 会把你选择的下一步添加到日历。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida 會把你選擇的下一步加入行事曆。"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida ਤੁਹਾਡੇ ਚੁਣੇ ਅਗਲੇ ਕਦਮ ਤੁਹਾਡੇ ਕੈਲੰਡਰ ਵਿੱਚ ਜੋੜਦਾ ਹੈ।"
+          }
+        },
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Temida adds the next steps you choose to your calendar."
+          }
+        }
+      }
+    }
+  },
+  "version": "1.0"
+}

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Temida brand kit</title>
+<meta name="description" content="The Temida mark, icon, colours, type and controls, in one page.">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="stylesheet" href="../tokens.css?v=3">
+<style>
+  :root { color-scheme: light dark; --accent: #2b3550; --bg: #fff; --bg2: #f5f5f7; --text: #1d1d1f; --text2: rgba(29,29,31,.72); --line: #e5e5ea; }
+  @media (prefers-color-scheme: dark) { :root { --accent: #9fb0d6; --bg: #000; --bg2: #1c1c1e; --text: #f5f5f7; --text2: rgba(245,245,247,.72); --line: #2c2c2e; } }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.5 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  main { max-width: 1080px; margin: 0 auto; padding: 0 20px 96px; }
+  h1, h2, .serif { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.015em; }
+  header { padding: 96px 0 48px; display: flex; gap: 24px; align-items: center; }
+  header img { width: 96px; height: 96px; border-radius: 22%; }
+  h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.05; margin: 0 0 8px; }
+  header p { margin: 0; color: var(--text2); }
+  section { padding: 48px 0; border-top: 1px solid var(--line); }
+  h2 { font-size: 28px; margin: 0 0 8px; }
+  .lede { color: var(--text2); margin: 0 0 32px; max-width: 60ch; }
+  .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .card { background: var(--bg2); border-radius: 28px; padding: 24px; }
+  .card small { display: block; color: var(--text2); font-size: 13px; margin-top: 8px; }
+  .tile { aspect-ratio: 1; border-radius: 20px; display: grid; place-items: center; }
+  .tile img { width: 55%; }
+  .dark { background: #000; } .light { background: #fff; border: 1px solid var(--line); }
+  .sw { height: 96px; border-radius: 20px; margin-bottom: 12px; border: 1px solid var(--line); }
+  .sw + b { font-size: 15px; } code { font: 13px ui-monospace, "SF Mono", Menlo, monospace; color: var(--text2); }
+  .spec { font-size: clamp(44px, 8vw, 88px); line-height: 1; margin: 0 0 12px; }
+  .scale div { display: flex; align-items: baseline; gap: 16px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+  .scale span { width: 64px; flex: none; color: var(--text2); font-size: 13px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn { height: 48px; padding: 0 24px; border-radius: 999px; border: 1px solid var(--line); background: transparent; color: var(--text); font: 600 15px/1 inherit; display: inline-flex; align-items: center; gap: 10px; }
+  .btn.solid { background: var(--accent); border-color: var(--accent); color: #fff; }
+  @media (prefers-color-scheme: dark) { .btn.solid { color: #0b0f1a; } }
+  .space { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; }
+  .space i { display: block; background: var(--accent); border-radius: 4px; }
+  .space div { text-align: center; font-size: 13px; color: var(--text2); }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  td, th { text-align: left; padding: 12px 8px; border-bottom: 1px solid var(--line); }
+  th { color: var(--text2); font-weight: 500; }
+  a { color: var(--accent); }
+  footer { padding: 32px 0; color: var(--text2); font-size: 13px; border-top: 1px solid var(--line); }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <img src="icon-1024.png" alt="The Temida icon: scales on a Greek column, on a slate tile">
+    <div>
+      <h1>Temida brand kit</h1>
+      <p>White paper, dark ink, one calm colour, a serif for the headline. Nothing that shouts.</p>
+    </div>
+  </header>
+
+  <section>
+    <h2>The mark</h2>
+    <p class="lede">Temida's scales on a Greek column: a fluted shaft, one beam, fine hangers and two flat pans. White on the slate tile, slate on its own. No text, no outline. It has to read at 29 points.</p>
+    <div class="grid">
+      <div class="card"><div class="tile" style="background:linear-gradient(#5c6b8a,#2b3550)"><img src="../icon.svg" alt="" style="width:100%;border-radius:20px"></div><small>App icon · <a href="icon-1024.png" download>1024 PNG</a></small></div>
+      <div class="card"><div class="tile light"><img src="mark-slate.svg" alt=""></div><small>Mark on light · <a href="mark.svg" download>SVG</a></small></div>
+      <div class="card"><div class="tile dark"><img src="mark-white.svg" alt=""></div><small>Mark on dark</small></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Colour</h2>
+    <p class="lede">Slate is the only colour the brand owns. Red, amber and green mean deadline, soon and done, and only ever sit on data. Never cream, sand, yellow, brown, purple or teal.</p>
+    <div class="grid">
+      <div><div class="sw" style="background:#2b3550"></div><b>Slate</b><br><code>#2b3550 · dark #9fb0d6</code></div>
+      <div><div class="sw" style="background:#5c6b8a"></div><b>Slate light</b><br><code>#5c6b8a · icon top</code></div>
+      <div><div class="sw" style="background:#fff"></div><b>Paper</b><br><code>#ffffff · dark #000000</code></div>
+      <div><div class="sw" style="background:#f5f5f7"></div><b>Surface</b><br><code>#f5f5f7 · dark #1c1c1e</code></div>
+      <div><div class="sw" style="background:#1d1d1f"></div><b>Ink</b><br><code>#1d1d1f · dark #f5f5f7</code></div>
+      <div><div class="sw" style="background:#b03220"></div><b>Deadline</b><br><code>#b03220</code></div>
+      <div><div class="sw" style="background:#976316"></div><b>Soon</b><br><code>#976316</code></div>
+      <div><div class="sw" style="background:#1f6e46"></div><b>Done</b><br><code>#1f6e46</code></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Type</h2>
+    <p class="lede">Headlines are set in Temida Serif, because a brief is set in a serif. Everything else is the system font. Labels are sentence case, never spaced-out capitals.</p>
+    <div class="card" style="margin-bottom:16px">
+      <p class="spec serif">Your case, in one brief.</p>
+      <small>Temida Serif Semibold · Newsreader, renamed, SIL Open Font License · <a href="../fonts/TemidaSerif-Semibold.woff2" download>WOFF2</a> · <a href="../fonts/OFL.txt">licence</a></small>
+    </div>
+    <div class="scale">
+      <div><span>34 / 41</span><strong class="serif" style="font-size:34px">Small claim</strong></div>
+      <div><span>22 / 28</span><strong style="font-size:22px">Next steps</strong></div>
+      <div><span>17 / 24</span><span style="width:auto;color:var(--text);font-size:17px">File the reply by Friday.</span></div>
+      <div><span>15 / 20</span><span style="width:auto;color:var(--text);font-size:15px">Bring two copies of every page.</span></div>
+      <div><span>13 / 18</span><span style="width:auto;font-size:13px">Planning aid, not legal advice.</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Controls</h2>
+    <p class="lede">One control: a 48 point capsule. Filled with slate for the main action, outlined for the rest. Focus is a 4 point ring at 30 percent slate.</p>
+    <div class="btns">
+      <button class="btn solid" type="button">Create a free account</button>
+      <button class="btn" type="button">Log in</button>
+      <button class="btn" type="button" style="background:#000;color:#fff;border-color:#000">&#63743; Sign in with Apple</button>
+    </div>
+  </section>
+
+  <section>
+    <h2>Space and shape</h2>
+    <p class="lede">An 8 point grid. Cards round at 28, grouped lists at 20, fields at 12, controls fully. Side margin 20, reading column 680.</p>
+    <div class="space">
+      <div><i style="width:4px;height:4px"></i>4</div><div><i style="width:8px;height:8px"></i>8</div><div><i style="width:12px;height:12px"></i>12</div>
+      <div><i style="width:16px;height:16px"></i>16</div><div><i style="width:24px;height:24px"></i>24</div><div><i style="width:32px;height:32px"></i>32</div><div><i style="width:48px;height:48px"></i>48</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Structure</h2>
+    <p class="lede">The same five places on every platform, in the same order.</p>
+    <table>
+      <tr><th scope="col">Place</th><th>Web</th><th>iPhone</th><th>Mac</th></tr>
+      <tr><td>Case: what happened, the clock</td><td>Section I</td><td>Tab</td><td>Sidebar</td></tr>
+      <tr><td>Tasks: steps, Reminders, Calendar</td><td>Section III</td><td>Tab</td><td>Sidebar</td></tr>
+      <tr><td>Money: projection and scenarios</td><td>Section II</td><td>Tab</td><td>Sidebar</td></tr>
+      <tr><td>Files: documents and case law</td><td>Section IV</td><td>Tab</td><td>Sidebar</td></tr>
+      <tr><td>Profile: account and settings</td><td>Header</td><td>Tab</td><td>Sidebar</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Voice</h2>
+    <p class="lede" style="margin:0">Short sentences, plain words, no em dashes, no hype. Say what to do next and why now. Temida is a planning aid, not legal advice, and says so once where it matters.</p>
+  </section>
+
+  <footer>Temida · <a href="../">Back to the site</a> · The full rulebook is <code>brand/BRAND.md</code> in the repo.</footer>
+</main>
+</body>
+</html>

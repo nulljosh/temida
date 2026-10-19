@@ -1,0 +1,16 @@
+{
+  "name": "Temida",
+  "short_name": "Temida",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#100e0b",
+  "theme_color": "#100e0b",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "version": "--prod"
+}

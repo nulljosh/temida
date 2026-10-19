@@ -1,0 +1,32 @@
+name: Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - run: swiftc -O ios/Sources/Models/ChecklistIndex.swift ios/Sources/Models/Limitation.swift tests/main.swift -o /tmp/clidx && /tmp/clidx
+
+  docs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: README file references aren't stale
+        run: |
+          python3 - <<'PY'
+          import re, os, sys
+          refs = re.findall(r'(?:src="|\]\()([^")#?\s]+)', open("README.md").read())
+          bad = [r for r in refs if "://" not in r and not r.startswith(("mailto:", "/")) and not os.path.exists(r)]
+          print("stale README refs:", bad)
+          sys.exit(bool(bad))
+          PY

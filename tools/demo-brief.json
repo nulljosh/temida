@@ -1,0 +1,93 @@
+{
+  "_note": "A made-up tenancy dispute for demo screenshots. Every name, place and figure is fictional. Run a debug build with -demoFile <path to this file>; it never touches the network.",
+  "profile": { "full_name": "Maya Rivera", "avatar_seed": "48213" },
+  "done": [1, 2, 3],
+  "fragments": {
+    "native": {
+      "rcmp": {
+        "claimed": [
+          { "k": "Deposit", "v": "Returned in full, doubled if withheld in bad faith" },
+          { "k": "Rent abatement", "v": "Four cold months without working heat" },
+          { "k": "Costs", "v": "Filing fee and photocopies" }
+        ],
+        "title": "Rivera v. Harbourview Rentals",
+        "cover": { "l": "Rivera", "r": "Harbourview Rentals" },
+        "blurb": "A $2,400 deposit kept after move-out, and four months of a broken heater the landlord never fixed.",
+        "meta": [
+          { "k": "Tenant", "v": "M. Rivera" },
+          { "k": "Landlord", "v": "Harbourview Rentals" },
+          { "k": "Forum", "v": "Tenancy tribunal" },
+          { "k": "Move-out", "v": "Jun 30, 2026" },
+          { "k": "Status", "v": "Gathering evidence" }
+        ],
+        "prose": {
+          "eyebrow": "Deposit and repairs dispute",
+          "badges": "Claim not filed|Gathering evidence",
+          "limitIncident": "2026-06-30",
+          "limitDeadline": "2028-06-30",
+          "limitLabel": "Filing deadline",
+          "limitSub": "Two years from move-out · Jun 30, 2028",
+          "limitStart": "Move-out · Jun 2026",
+          "limitEnd": "Deadline: Jun 2028",
+          "belt": "Floor|$2,400|Deposit back|Likely|$4,100|Deposit, rent abatement|Ceiling|$5,600|Double deposit penalty"
+        }
+      }
+    }
+  },
+  "cases": {
+    "STACK_HEADS": [
+      { "label": "Deposit", "low": 2.4, "high": 4.8, "sub": "Doubled if withheld in bad faith" },
+      { "label": "Rent abatement", "low": 1.2, "high": 2.4, "sub": "Four months at 25 to 50 percent" },
+      { "label": "Costs", "low": 0.2, "high": 0.4, "sub": "Filing fee and copies" }
+    ],
+    "FACTS": [
+      { "key": "Moved in", "value": "Sep 1, 2024" },
+      { "key": "Moved out", "value": "Jun 30, 2026" },
+      { "key": "Deposit paid", "value": "$2,400" },
+      { "key": "Monthly rent", "value": "$1,950" },
+      { "key": "Heater broken", "value": "Nov 2025 to Feb 2026" },
+      { "key": "Repair requests", "value": "Three, all in writing" },
+      { "key": "Move-out inspection", "value": "Never offered" },
+      { "key": "Forwarding address", "value": "Given Jun 28, 2026" }
+    ],
+    "GROUNDS": [
+      { "n": "01", "id": "deposit", "sec": "Deposit", "val": "$2,400", "cite": "Residential tenancy rules", "desc": "No inspection was offered and nothing was returned within 15 days.", "high": 2.4, "risk": "low", "grade": "A", "title": "Deposit kept without an inspection" },
+      { "n": "02", "id": "repairs", "sec": "Repairs", "val": "$1,700", "cite": "Duty to repair", "desc": "Four months without heat after three written requests.", "high": 1.7, "risk": "medium", "grade": "B", "title": "Heater left broken all winter" },
+      { "n": "03", "id": "penalty", "sec": "Penalty", "val": "$2,400", "cite": "Double deposit rule", "desc": "Keeping a deposit past the deadline can cost the landlord double.", "high": 2.4, "risk": "medium", "grade": "B", "title": "Double the deposit" }
+    ],
+    "WITNESSES": [
+      { "initials": "JT", "name": "Jordan Tse", "role": "Upstairs neighbour", "date": "Jan 2026", "tags": ["Heat", "Repairs"], "statement": "Our unit had the same heater problem. Maya showed me her repair emails in December.", "annotations": [ { "quote": "the same heater problem", "note": "Shows a building-wide fault the landlord knew about." } ] }
+    ],
+    "JOURNAL_SEED": [
+      { "date": "2026-01-14", "text": "Fourth night under 15 degrees. Bought a space heater, kept the receipt." },
+      { "date": "2026-06-30", "text": "Handed back the keys. Asked for an inspection, was told it was not needed." }
+    ],
+    "CHECKLIST": [
+      { "i": "1", "label": "Save the lease and the deposit receipt", "pri": "now", "lev": 3, "done": true },
+      { "i": "2", "label": "Export the three repair emails", "pri": "now", "lev": 3, "done": true },
+      { "i": "3", "label": "Photograph the move-out condition", "pri": "now", "lev": 2, "done": true },
+      { "i": "4", "label": "Send a written demand for the deposit", "pri": "now", "lev": 3, "done": false },
+      { "i": "5", "label": "Ask Jordan for a signed statement", "pri": "now", "lev": 2, "done": false },
+      { "i": "6", "label": "Gather heater and hydro receipts", "pri": "soon", "lev": 2, "done": false },
+      { "i": "7", "label": "File the tribunal application", "pri": "soon", "lev": 3, "done": false },
+      { "i": "8", "label": "Book a free legal clinic call", "pri": "later", "lev": 1, "done": false }
+    ],
+    "TIMELINE": [
+      { "when": "Nov 2025", "title": "Heater fails", "desc": "First written repair request.", "state": "done" },
+      { "when": "Jun 30, 2026", "title": "Move-out", "desc": "Keys returned, no inspection.", "state": "done" },
+      { "when": "This week", "title": "Demand letter", "desc": "Ask for the deposit back in writing.", "state": "now" },
+      { "when": "Next month", "title": "File the claim", "desc": "Tribunal application if there is no answer.", "state": "next" }
+    ],
+    "LAWYERS": [
+      { "id": "clinic", "init": "LC", "name": "Lakeside Legal Clinic", "sub": "Free tenant advice", "fit": 5, "status": "none", "tags": [ { "t": "Free" }, { "t": "Tenancy" } ], "contacts": [ { "href": "https://example.com", "kind": "web", "label": "Website", "primary": true } ] },
+      { "id": "advocate", "init": "TA", "name": "Tenant Advocacy Centre", "sub": "Hearing prep", "fit": 4, "status": "none", "tags": [ { "t": "Tenancy" } ], "contacts": [ { "href": "https://example.com", "kind": "web", "label": "Website", "primary": true } ] }
+    ],
+    "SCENARIOS": [
+      { "name": "Best case", "desc": "Deposit doubled, rent abated for the cold months.", "amt": "$5.6k", "pct": 25, "color": "green" },
+      { "name": "Most likely", "desc": "Deposit back with a partial rent abatement.", "amt": "$4.1k", "pct": 50, "color": "blue" },
+      { "name": "Floor", "desc": "Deposit back only.", "amt": "$2.4k", "pct": 25, "color": "amber" }
+    ],
+    "CALL_SCRIPT": "Hi, I am calling about my deposit for the unit I left on June 30.",
+    "OUTREACH_EMAIL": ""
+  }
+}
