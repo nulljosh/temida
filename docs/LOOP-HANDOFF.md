@@ -8,6 +8,7 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 
 - The landing and the signed-in web app run in six languages: English, French, Spanish, Simplified Chinese, Traditional Chinese and Punjabi. The signed-in shell has zero accessibility problems in an automated check, on light and dark, phone and desktop.
 - The landing is now temida.jaybulb.com. The old litigate and atticus hosts redirect there.
+- The repo is public since 2026-10-19 from one clean commit; the old history is in the private repo temida-private.
 - You can add facts, deadlines and lawyers to a case from the app. iPhone and Mac have a + menu on the Case tab, and the web has + Add buttons under the facts, the lawyers and the timeline. Each save reads the case fresh, adds one item and writes it back.
 - The demo scenarios showed 0 percent because of a demo data bug. That is fixed.
 - Docs for the web and iPhone are synced, and the v9 line in the roadmap is current.
