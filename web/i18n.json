@@ -266,7 +266,8 @@
   "Ultimate limitation period ends": "Fin du délai de prescription ultime",
   "Notice to the municipality is due": "Avis à la municipalité à remettre",
   "Worked out from BC law. Check it with a lawyer.": "Calculé selon le droit de la C.-B. Vérifiez-le avec un avocat.",
-  "Due": "Échéance"
+  "Due": "Échéance",
+  "The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).": "Le jour où vous avez su, ou auriez raisonnablement dû savoir, que vous aviez subi un préjudice, qui l'a causé et qu'une action en justice est la bonne voie (art. 8)."
  },
  "es": {
   "features": "Funciones",
@@ -535,7 +536,8 @@
   "Ultimate limitation period ends": "Termina el plazo de prescripción máximo",
   "Notice to the municipality is due": "Vence el aviso al municipio",
   "Worked out from BC law. Check it with a lawyer.": "Calculado según la ley de BC. Confírmalo con un abogado.",
-  "Due": "Vence"
+  "Due": "Vence",
+  "The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).": "El día en que supo, o razonablemente debió saber, que sufrió un daño, quién lo causó y que acudir a los tribunales es el paso adecuado (art. 8)."
  },
  "zh-Hans": {
   "features": "功能",
@@ -804,7 +806,8 @@
   "Ultimate limitation period ends": "最终时效期届满",
   "Notice to the municipality is due": "须通知市政府",
   "Worked out from BC law. Check it with a lawyer.": "根据 BC 省法律计算。请向律师核实。",
-  "Due": "到期"
+  "Due": "到期",
+  "The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).": "您首次知道或理应知道自己受到损害、由谁造成，以及诉诸法院是合适做法的那一天（第 8 条）。"
  },
  "zh-Hant": {
   "features": "功能",
@@ -1073,7 +1076,8 @@
   "Ultimate limitation period ends": "最終時效期屆滿",
   "Notice to the municipality is due": "須通知市政府",
   "Worked out from BC law. Check it with a lawyer.": "根據 BC 省法律計算。請向律師核實。",
-  "Due": "到期"
+  "Due": "到期",
+  "The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).": "您首次知道或理應知道自己受到損害、由誰造成，以及訴諸法院是合適做法的那一天（第 8 條）。"
  },
  "pa": {
   "features": "ਵਿਸ਼ੇਸ਼ਤਾਵਾਂ",
@@ -1342,6 +1346,7 @@
   "Ultimate limitation period ends": "ਅੰਤਿਮ ਮਿਆਦ ਸੀਮਾ ਖਤਮ",
   "Notice to the municipality is due": "ਨਗਰਪਾਲਿਕਾ ਨੂੰ ਨੋਟਿਸ ਦੇਣਾ ਹੈ",
   "Worked out from BC law. Check it with a lawyer.": "BC ਕਾਨੂੰਨ ਮੁਤਾਬਕ ਗਿਣਿਆ ਗਿਆ। ਵਕੀਲ ਨਾਲ ਪੱਕਾ ਕਰੋ।",
-  "Due": "ਮਿਆਦ"
+  "Due": "ਮਿਆਦ",
+  "The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).": "ਉਹ ਦਿਨ ਜਦੋਂ ਤੁਹਾਨੂੰ ਪਹਿਲੀ ਵਾਰ ਪਤਾ ਲੱਗਾ, ਜਾਂ ਵਾਜਬ ਤੌਰ 'ਤੇ ਪਤਾ ਹੋਣਾ ਚਾਹੀਦਾ ਸੀ, ਕਿ ਤੁਹਾਡਾ ਨੁਕਸਾਨ ਹੋਇਆ, ਕਿਸ ਨੇ ਕੀਤਾ, ਅਤੇ ਅਦਾਲਤ ਜਾਣਾ ਸਹੀ ਕਦਮ ਹੈ (ਧਾਰਾ 8)।"
  }
 }

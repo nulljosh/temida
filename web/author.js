@@ -22,6 +22,7 @@
   // and stored as `due` (ISO) with the cite in `rule`, the same as ios/Sources/Models/Limitation.swift.
   const RULES = {
     basic:    { months: 24,  label: 'Basic limitation, 2 years (BC)', start: 'Claim discovered', title: 'Basic limitation period ends',
+                hint: 'The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).',
                 cite: 'Limitation Act (BC) s. 6(1): 2 years after the claim is discovered' },
     ultimate: { months: 180, label: 'Ultimate limitation, 15 years (BC)', start: 'Act or omission', title: 'Ultimate limitation period ends',
                 cite: 'Limitation Act (BC) s. 21(1): 15 years after the act or omission' },
@@ -132,11 +133,11 @@
         const r = RULES[el.rule.value];
         f('start').hidden = !r; f('due').hidden = !!r; note.hidden = !r;
         if (!r) return;
-        f('start').firstChild.textContent = tr(r.start);
+        f('start').firstChild.textContent = tr(r.start); f('start').title = r.hint ? tr(r.hint) : '';
         if (!el.start.value) el.start.value = iso(new Date());
         if (!el.title.value) el.title.value = tr(r.title);
         note.textContent = tr('Due') + ' ' + new Date(addMonths(el.start.value, r.months) + 'T12:00').toLocaleDateString(document.documentElement.lang || undefined, { dateStyle: 'medium' })
-          + '. ' + r.cite + '. ' + tr('Worked out from BC law. Check it with a lawyer.');
+          + '. ' + r.cite + '. ' + (r.hint ? tr(r.hint) + ' ' : '') + tr('Worked out from BC law. Check it with a lawyer.');
       };
       el.rule.addEventListener('change', sync); el.start.addEventListener('input', sync); sync();
     }

@@ -24,7 +24,7 @@ lawyers, deadlines without touching the database. ~~Facts, deadlines and lawyers
 the 2-year basic or 15-year ultimate period from the BC Limitation Act, or the 2-month notice to a municipality,
 enter the start date, and the due date and cite are saved with the deadline). ~~Every deadline can go to Reminders
 and Calendar~~ (done in the apps, long press). ~~Keep the Reminders copy in sync when the deadline changes~~ (done 2026-10-19; Calendar has write-only access
-and cannot read its event back, so a Calendar copy stays where it was). Open: a discoverability helper that asks when the claim was found.
+and cannot read its event back, so a Calendar copy stays where it was). ~~A discoverability helper~~ (done 2026-10-19: the 2-year rule explains s. 8 in plain words under the start date). v10 is done.
 
 **v11 to v20: the paper.** Documents with real files (PDF, photos), OCR, attach to facts. Evidence
 timeline. Export a clean PDF brief for counsel. Share a read-only, expiring link scoped to one case.

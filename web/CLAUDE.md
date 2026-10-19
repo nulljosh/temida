@@ -59,9 +59,9 @@ temp dir, injects `window.APP_CONFIG`, and calls `wrangler pages deploy`.
 
 ## Cache busting
 Bump the `?v=` on every CSS or JS file you change. Current values:
-- `index.html`: `tokens.css?v=4`, `style.css?v=82`, `footer-shader.js?v=2`, `i18n.js?v=11`, `auth.js?v=57`
-- `auth.js` appends `script.js?v=52`. Bump it there, not in `index.html`.
-- `script.js` appends `webmcp.js?v=2` and `author.js?v=6`; `i18n.js` loads `i18n.json?v=9`.
+- `index.html`: `tokens.css?v=4`, `style.css?v=82`, `footer-shader.js?v=2`, `i18n.js?v=12`, `auth.js?v=58`
+- `auth.js` appends `script.js?v=53`. Bump it there, not in `index.html`.
+- `script.js` appends `webmcp.js?v=2` and `author.js?v=7`; `i18n.js` loads `i18n.json?v=10`.
 
 `sw.js` has `CACHE = 'themis-v1'`. It is network-first, with the cache only as an offline fallback,
 so the name rarely needs a bump.

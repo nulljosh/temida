@@ -31,7 +31,7 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 7. An iOS 1.1 build with the new name and icon. Screenshots use demo data only.
 8. Roadmap v8: empty states that say what to do next, haptics, and VoiceOver labels on every control.
 9. Roadmap v9: the four open authoring items above.
-10. Roadmap v10, the rest: a discoverability helper. Reminders already follow an edited deadline.
+10. Roadmap v10 is done. Next is v11: documents with real files (PDF, photos), attached to facts.
 11. Keep simplifying the UI.
 
 ## Restart prompt

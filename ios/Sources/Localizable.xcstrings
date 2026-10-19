@@ -8099,6 +8099,41 @@
           }
         }
       }
+    },
+    "The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).": {
+      "extractionState": "manual",
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Le jour où vous avez su, ou auriez raisonnablement dû savoir, que vous aviez subi un préjudice, qui l'a causé et qu'une action en justice est la bonne voie (art. 8)."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "El día en que supo, o razonablemente debió saber, que sufrió un daño, quién lo causó y que acudir a los tribunales es el paso adecuado (art. 8)."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您首次知道或理应知道自己受到损害、由谁造成，以及诉诸法院是合适做法的那一天（第 8 条）。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "您首次知道或理應知道自己受到損害、由誰造成，以及訴諸法院是合適做法的那一天（第 8 條）。"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਉਹ ਦਿਨ ਜਦੋਂ ਤੁਹਾਨੂੰ ਪਹਿਲੀ ਵਾਰ ਪਤਾ ਲੱਗਾ, ਜਾਂ ਵਾਜਬ ਤੌਰ 'ਤੇ ਪਤਾ ਹੋਣਾ ਚਾਹੀਦਾ ਸੀ, ਕਿ ਤੁਹਾਡਾ ਨੁਕਸਾਨ ਹੋਇਆ, ਕਿਸ ਨੇ ਕੀਤਾ, ਅਤੇ ਅਦਾਲਤ ਜਾਣਾ ਸਹੀ ਕਦਮ ਹੈ (ਧਾਰਾ 8)।"
+          }
+        }
+      }
     }
   },
   "version": "1.0"

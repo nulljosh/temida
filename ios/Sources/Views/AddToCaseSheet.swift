@@ -45,6 +45,7 @@ struct AddToCaseSheet: View {
                     .onChange(of: rule) { if let rule, a.isEmpty { a = String(localized: defaultTitle(rule)) } }
                     if let rule {
                         DatePicker(startLabel(rule), selection: $start, displayedComponents: .date)
+                        if rule == .basic { Text("The day you first knew, or reasonably should have known, that you were harmed, who caused it, and that going to court is the right step (s. 8).").font(.footnote).foregroundStyle(.secondary) }
                         LabeledContent("Due", value: Day.date(dueDay)?.formatted(date: .abbreviated, time: .omitted) ?? "")
                         Text(verbatim: rule.cite).font(.footnote).foregroundStyle(.secondary)
                         Text("Worked out from BC law. Check it with a lawyer.").font(.footnote).foregroundStyle(.secondary)

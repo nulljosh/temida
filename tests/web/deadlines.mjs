@@ -13,6 +13,7 @@ assert.equal(addMonths('2025-12-31', 2), '2026-02-28');
 console.log('addMonths ok');
 
 const local = process.argv[2] !== 'live';
+const tag = Date.now().toString(36); // titles unique per run, so an edit finds this run's row
 let { b, p, errors } = await open(qa(), { local });
 async function form(open, values) {
   await open();
@@ -24,12 +25,17 @@ async function form(open, values) {
 }
 const add = v => form(() => p.click('.author-add[data-label="Add deadline"]'), v);
 const edit = who => p.evaluate(who => [...document.querySelectorAll('#timeline .author-row button[data-label="Edit"]')].find(b => b.getAttribute('aria-label').includes(who)).click(), who);
-await add({ rule: 'basic', start: '2026-10-19', title: 'Rule deadline', desc: 'From the Limitation Act' });
-await add({ rule: 'notice', start: '2025-12-31', title: 'Hand deadline', desc: '' });
-await form(() => edit('Hand deadline'), { due: '2027-01-15' });
+await add({ rule: 'basic', start: '2026-10-19', title: 'Rule ' + tag, desc: 'From the Limitation Act' });
+await add({ rule: 'notice', start: '2025-12-31', title: 'Hand ' + tag, desc: '' });
+await form(() => edit('Hand ' + tag), { due: '2027-01-15' });
 await new Promise(r => setTimeout(r, 2500));
 await b.close();
 ({ b, p, errors } = await open(qa(), { local }));
-console.log(JSON.stringify(await p.evaluate(() => [...document.querySelectorAll('#timeline .tl-item')].map(d =>
-  d.querySelector('.tl-when').textContent + ' / ' + d.querySelector('.tl-title').textContent + ' / ' + ((d.querySelector('.tl-rule') || {}).textContent || '-')))));
+const rows = await p.evaluate(tag => [...document.querySelectorAll('#timeline .tl-item')].filter(d => d.textContent.includes(tag)).map(d =>
+  [d.querySelector('.tl-title').textContent, d.querySelector('.tl-when').textContent, (d.querySelector('.tl-rule') || {}).textContent || '']), tag);
+console.log(JSON.stringify(rows));
+assert.deepEqual(rows.map(r => r[1]), ['Oct 19, 2028', 'Jan 15, 2027']);
+assert.match(rows[0][2], /s\. 6\(1\)/);
+assert.equal(rows[1][2], '', 'a date picked by hand drops the rule');
+console.log('deadlines ok');
 console.log(errors.join('\n') || 'no errors'); await b.close();
