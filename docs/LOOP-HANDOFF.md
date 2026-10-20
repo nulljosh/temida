@@ -9,20 +9,19 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 - v11.0.0. Search covers the case, the journal and the files on web, iPhone and Mac. Share as PDF and the BC deadline rules run on the device only.
 - The landing holds A+ on phone and desktop, light and dark: slate hero, parallax, footer shader, 0 leak terms, no video. The promo video must not come back.
 - Every brief list decodes lossy, nested ones too, so one bad row never drops a case.
-- The native declutter pass is done: plain section headers, no repeated Money totals, no empty cards, one menu per task, Mac panel titles that match the sidebar.
+- The declutter pass is done on every platform. Web: Edit and Remove show on hover or focus. Native: plain section headers, no repeated Money totals, no empty cards, one menu per task, Mac panel titles that match the sidebar.
 - iPhone QA: all four tabs checked on the demo file (`-demoFile`). Mac QA: all five panels checked with `-demoJSON`; see `macos/CLAUDE.md` for the launch line. Both use fictional data only.
 - Docs, README, WHITEPAPER and `architecture.svg` are current for v11. The repo has 0 open issues and no stale branches.
 - Tests: `node tests/web/save.mjs`, `grounds.mjs`, `deadlines.mjs` and `search.mjs` on the QA account in `.env.qa`. `owner.mjs` prints booleans only. Never screenshot the owner's signed-in page.
 
 ## Next, in order
 
-1. Declutter the signed-in web app, checked on the QA account only.
-2. The Mac App Store record and the first Mac build.
-3. An iOS 1.1 build with the new name and icon. Screenshots use demo data only.
-4. App Privacy answers and the privacy URL with the next store version.
-5. A VoiceOver walk on a real device.
-6. Real files and OCR in Files waits on Joshua's call. Do not start it.
-7. Keep simplifying the UI. Roadmap to v100 is in `roadmap.md`.
+1. The Mac App Store record and the first Mac build.
+2. An iOS 1.1 build with the new name and icon. Screenshots use demo data only.
+3. App Privacy answers and the privacy URL with the next store version.
+4. A VoiceOver walk on a real device.
+5. Real files and OCR in Files waits on Joshua's call. Do not start it.
+6. Keep simplifying the UI. Roadmap to v100 is in `roadmap.md`.
 
 ## Restart prompt
 
