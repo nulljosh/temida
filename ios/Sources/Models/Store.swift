@@ -6,8 +6,7 @@ import LocalAuthentication
 import Observation
 import SwiftUI
 
-// One Store for iOS and macOS. Accounts and data go through jaybulb-api (API.swift), the same
-// backend as the web app, so a brief edited anywhere shows up everywhere.
+// One Store for iOS and macOS, on jaybulb-api (API.swift) like the web app: edit anywhere, see it everywhere.
 
 // MARK: - DB row types
 
@@ -95,8 +94,7 @@ final class Store {
 
     // MARK: Session
 
-    /// The splash stays up until we know where to land, so the sign-in screen never flashes
-    /// for someone already signed in, and onboarding never flashes for an existing account.
+    /// The splash stays up until we know where to land, so sign-in and onboarding never flash.
     @MainActor func checkSession() async {
         let started = Date()
         #if DEBUG
@@ -279,8 +277,7 @@ final class Store {
     static func randomNonce(length: Int = 32) -> String {
         let charset = Array("0123456789ABCDEFGHIJKLMNOPQRSTUVXYZabcdefghijklmnopqrstuvwxyz-._")
         var bytes = [UInt8](repeating: 0, count: length)
-        // ponytail: SecRandomCopyBytes can fail; a plain random fallback is fine because
-        // the nonce only needs to be unguessable-per-request, not key material.
+        // ponytail: if SecRandomCopyBytes fails, plain random is fine for a per-request nonce
         if SecRandomCopyBytes(kSecRandomDefault, length, &bytes) != errSecSuccess {
             bytes = (0..<length).map { _ in UInt8.random(in: 0...255) }
         }
@@ -346,8 +343,7 @@ final class Store {
 
     // MARK: Data
 
-    /// Two rounds of parallel reads: profile and cases first (onboarding and the checklist
-    /// default depend on them), then everything else.
+    /// Two rounds of parallel reads: profile and cases first (onboarding depends on them), then the rest.
     @MainActor func loadAll() async {
         async let profile: Void = loadProfile()
         async let cases: Void = loadCaseData()
@@ -429,7 +425,7 @@ final class Store {
         revision += 1
     }
 
-    // MARK: Demo: a fictional brief from a local file. No network, so no real rows in a recording.
+    // MARK: Demo: `-demoFile <path>` or `-demoJSON <json>` (sandboxed Mac) loads a fictional brief, no network.
 
     #if DEBUG
     private struct DemoFile: Decodable {
@@ -439,11 +435,12 @@ final class Store {
         let done: [Int]
     }
 
-    /// `-demoFile <path>` replaces sign-in and every load with that file.
     @MainActor func loadDemo() -> Bool {
-        guard let path = UserDefaults.standard.string(forKey: "demoFile") else { return false }
+        let a = ProcessInfo.processInfo.arguments, i = a.firstIndex(of: "-demoJSON").map { $0 + 1 } // raw: UserDefaults reads `{` as a plist
+        let inline = i.flatMap { a.indices.contains($0) ? a[$0] : nil }
+        guard let path = inline ?? UserDefaults.standard.string(forKey: "demoFile") else { return false }
         do {
-            let d = try JSONDecoder().decode(DemoFile.self, from: Data(contentsOf: URL(fileURLWithPath: path)))
+            let d = try JSONDecoder().decode(DemoFile.self, from: inline.map { Data($0.utf8) } ?? Data(contentsOf: URL(fileURLWithPath: path)))
             profile = d.profile
             caseFragments = d.fragments.native ?? [:]
             apply(d.cases)

@@ -413,41 +413,6 @@
         }
       }
     },
-    "Actions": {
-      "extractionState": "manual",
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Actions"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Acciones"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "行动"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "行動"
-          }
-        },
-        "pa": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ਕਾਰਵਾਈਆਂ"
-          }
-        }
-      }
-    },
     "Add": {
       "extractionState": "manual",
       "localizations": {
@@ -1844,41 +1809,6 @@
           "stringUnit": {
             "state": "translated",
             "value": "ਦਸਤਾਵੇਜ਼ ਦੀ ਤਾਰੀਖ"
-          }
-        }
-      }
-    },
-    "Documents": {
-      "extractionState": "manual",
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Documents"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Documentos"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "文档"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "文件"
-          }
-        },
-        "pa": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ਦਸਤਾਵੇਜ਼"
           }
         }
       }

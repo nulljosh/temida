@@ -9,7 +9,7 @@ struct DocumentsTabView: View {
             }
             .padding(24)
         }
-        .navigationTitle("Documents")
+        .navigationTitle("Files")
         .searchable(text: $query, prompt: "Search files")
     }
 }

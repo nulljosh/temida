@@ -40,6 +40,7 @@ struct NextStepsView: View {
                         ForEach(done) { row($0) }
                     }
                 }
+                #if os(iOS) // the Mac sidebar has its own Lawyers item
                 Section {
                     NavigationLink {
                         ActionsTabView()
@@ -47,6 +48,7 @@ struct NextStepsView: View {
                         Label("Lawyers and call scripts", systemImage: "person.2")
                     }
                 }
+                #endif
             }
             .navigationTitle("Tasks")
             .sheet(item: $planning) { PlanSheet(request: $0) }
@@ -85,6 +87,7 @@ struct NextStepsView: View {
                 } label: {
                     Image(systemName: "ellipsis.circle").font(.title3).foregroundStyle(Color.brandSlate)
                 }
+                .menuIndicator(.hidden)
                 .accessibilityLabel("Plan this step")
             }
         }

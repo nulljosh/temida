@@ -25,6 +25,8 @@ this repo — mirrors `web/CLAUDE.md` and `ios/CLAUDE.md`.
 ```
 cd macos && xcodegen generate && open Temida.xcodeproj
 ```
+QA shots without sign-in (Debug only): `Temida.app/Contents/MacOS/Temida -demoJSON "$(cat demo.json)" -tab money -ApplePersistenceIgnoreState YES -qa UITEST_x`.
+The app is sandboxed, so `-demoFile <path>` cannot read a path outside it. Pass `UITEST_x` as a value: a bare argument is read as a file to open and SwiftUI then opens no window.
 Bundle: `com.nulljosh.brief` | Team: `QMM486NPYC` | macOS 14+
 
 ## Data sync
