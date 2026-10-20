@@ -64,6 +64,8 @@ struct NextStepsView: View {
                 Image(systemName: isDone ? "checkmark.circle.fill" : "circle")
                     .font(.title3)
                     .foregroundStyle(isDone ? Color.brandSlate : .secondary)
+                    .frame(minWidth: 44, minHeight: 44) // tap size, not just the glyph
+                    .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
             .accessibilityLabel(isDone ? LocalizedStringKey("Mark not done") : LocalizedStringKey("Mark done"))
@@ -86,6 +88,8 @@ struct NextStepsView: View {
                     }
                 } label: {
                     Image(systemName: "ellipsis.circle").font(.title3).foregroundStyle(Color.brandSlate)
+                        .frame(minWidth: 44, minHeight: 44)
+                        .contentShape(Rectangle())
                 }
                 .menuIndicator(.hidden)
                 .accessibilityLabel("Plan this step")
