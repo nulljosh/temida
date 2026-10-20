@@ -1388,6 +1388,8 @@ details.draft .d-kind,
 .author-row{display:flex;gap:8px;margin-top:8px}
 .author-row button{min-height:32px;padding:0 12px;border-radius:999px;border:1px solid color-mix(in srgb,currentColor 25%,transparent);background:none;color:inherit;font:inherit;font-size:.85rem;cursor:pointer;opacity:.8}
 .author-row button:hover,.author-row button:focus-visible{opacity:1}
+/* with a mouse, Edit and Remove float bottom-right on the row being pointed at or focused; touch keeps them inline */
+@media (hover:hover){:is(#facts,#grounds-case,#witnesses,#timeline,#lawyers)>*{position:relative}:is(#facts,#grounds-case,#witnesses,#timeline,#lawyers)>:not(:hover):not(:focus-within) .author-row{opacity:0}.author-row{position:absolute;right:0;bottom:8px;margin:0;transition:opacity .15s}#lawyers .lawyer-body{position:relative}#lawyers .author-row{bottom:0}}
 
 /* Shell page (accounts without their own layout): one brief, so the case tabs and owner status go. */
 body[data-shell] .case-switcher,body[data-shell] .strip .meta,body[data-shell] #stripPill{display:none}
