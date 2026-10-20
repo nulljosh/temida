@@ -38,9 +38,9 @@ private struct LawyerDTO: Decodable {
     let sub: String
     let `init`: String
     let name: String
-    let tags: [LawyerTagDTO]
+    let tags: LossyList<LawyerTagDTO>? // nested lists are lossy too: one bad tag or contact keeps the lawyer
     let status: String?
-    let contacts: [LawyerContactDTO]
+    let contacts: LossyList<LawyerContactDTO>?
 }
 
 private struct ScenarioDTO: Decodable {
@@ -110,9 +110,9 @@ private struct WitnessDTO: Decodable {
     let name: String
     let role: String
     let date: String
-    let tags: [String]
+    let tags: LossyList<String>?
     let statement: String
-    let annotations: [WitnessAnnotationDTO]
+    let annotations: LossyList<WitnessAnnotationDTO>?
 }
 
 private struct CaseComparableDTO: Decodable {
@@ -321,7 +321,7 @@ private extension LawyerDTO {
         var phoneNote: String?
         var email: String?
         var website: String?
-        for c in contacts {
+        for c in contacts?.items ?? [] {
             switch c.kind {
             case "tel":
                 phone = c.href.hasPrefix("tel:") ? String(c.href.dropFirst(4)) : c.href
@@ -339,7 +339,7 @@ private extension LawyerDTO {
             initials: `init`,
             name: name,
             subtitle: sub,
-            tags: tags.map { LawyerTag(label: $0.t, style: lawyerTagStyle($0.c)) },
+            tags: (tags?.items ?? []).map { LawyerTag(label: $0.t, style: lawyerTagStyle($0.c)) },
             phone: phone,
             phoneNote: phoneNote,
             email: email,
@@ -391,9 +391,9 @@ private extension WitnessDTO {
             name: name,
             role: role,
             date: date,
-            tags: tags,
+            tags: tags?.items ?? [],
             statement: statement,
-            annotations: annotations.map { WitnessAnnotation(quote: $0.quote, note: $0.note) }
+            annotations: (annotations?.items ?? []).map { WitnessAnnotation(quote: $0.quote, note: $0.note) }
         )
     }
 }
