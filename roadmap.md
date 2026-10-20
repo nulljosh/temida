@@ -71,7 +71,6 @@ Left open from the fix:
 
 ## Open
 - [ ] App Store privacy policy URL: should be https://temida.jaybulb.com/privacy.html, which is already in the local metadata. Frozen until next version ships (app-info only editable during staged versions). (2026-09-02: Apple rejects the PATCH, "privacyPolicyUrl can not be modified in the current state", while the only app-info is READY_FOR_DISTRIBUTION; local metadata is already correct, so it goes through on the next version bump via metadata apply) [2026-10-04: README updated with signed-out web screenshots; Apple sign-in sheet dismiss bug fixed.]
-- [x] Ship a macOS version of Temida. Mac 1.1.0 submitted 2026-10-19, Waiting for Review.
 - [ ] Needs app + website screenshots for README and splash screen, needs a simulator/browser session.
 
 ## App Store screenshots (queued 2026-08-11)
