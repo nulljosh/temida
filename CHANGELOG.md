@@ -2,6 +2,10 @@
 
 ## [v6.4.0] - 2026-10-19
 
+### A clean PDF for counsel
+- Print on the web saves the brief as a clean PDF: no search box, no Edit, Remove or Add buttons.
+- Grounds added without a citation no longer show an empty grey box.
+
 ### Search
 - Search the open case on web, iPhone and Mac. It filters facts, witnesses and grounds (and deadlines and lawyers on the web) on the device; nothing is sent anywhere.
 

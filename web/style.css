@@ -688,7 +688,8 @@ footer { margin-top: 80px; padding: 28px 0; border-top: 1px solid var(--rule); d
 }
 @media print {
   body { background: white !important; color: #0d0d0d !important; }
-  .auth-overlay, .strip, .tw-panel, .tabs, .copy-btn, .traj-card, .journal-add, .journal-form, .print-btn { display: none !important; }
+  .auth-overlay, .strip, .tw-panel, .tabs, .copy-btn, .traj-card, .journal-add, .journal-form, .print-btn,
+  .case-search, .author-add, .author-row, .author-dlg { display: none !important; }
   .tab-panel + .tab-panel { page-break-before: always; margin-top: 0; border-top: none; }
   .page { padding: 24px !important; max-width: 100% !important; }
   .clock-decay-svg { display: none !important; }

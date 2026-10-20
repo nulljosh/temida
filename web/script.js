@@ -397,7 +397,8 @@ function renderGrounds(containerId, suffix) {
         counter.append(cLbl, cTxt); inner.appendChild(counter);
       }
     }
-    inner.appendChild(cite); body.appendChild(inner);
+    if (g.cite) inner.appendChild(cite); // grounds added in the app have no citation yet
+    body.appendChild(inner);
 
     w.appendChild(hd); w.appendChild(mag); w.appendChild(body);
     c.appendChild(w);
