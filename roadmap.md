@@ -71,7 +71,6 @@ Left open from the fix:
 
 ## Open
 - [ ] App Store privacy policy URL: should be https://temida.jaybulb.com/privacy.html, which is already in the local metadata. Frozen until next version ships (app-info only editable during staged versions). (2026-09-02: Apple rejects the PATCH, "privacyPolicyUrl can not be modified in the current state", while the only app-info is READY_FOR_DISTRIBUTION; local metadata is already correct, so it goes through on the next version bump via metadata apply) [2026-10-04: README updated with signed-out web screenshots; Apple sign-in sheet dismiss bug fixed.]
-- [x] UI is pretty cluttered, app is shipped and works properly, but needs a decluttering pass. The native pass is done (2026-10-19): plain section headers, no repeated Money totals, no empty cards, one menu per task, Mac titles that match the sidebar. Web done too: Edit and Remove show on hover or focus.
 - [ ] Ship a macOS version of Temida, no macOS app record exists in ASC yet (`asc apps list` shows only iOS; macOS target uses bundle `com.nulljosh.brief` with zero builds uploaded). Needs a new app record first (`asc-app-create-ui` dashboard flow), bigger scope than a re-ship.
 - [ ] Needs app + website screenshots for README and splash screen, needs a simulator/browser session.
 
