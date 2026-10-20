@@ -197,10 +197,20 @@
     b.addEventListener('click', () => open(kind));
     anchor.after(b);
     decorate(kind);
-    new MutationObserver(() => decorate(kind)).observe(anchor, { childList: true });
+    new MutationObserver(() => { decorate(kind); filter(); }).observe(anchor, { childList: true });
   });
+  // v11: search the open case. Filters the rows on the page; nothing is sent anywhere.
+  const main = document.querySelector('.page > main'), search = document.createElement('input');
+  search.type = 'search'; search.className = 'case-search'; search.placeholder = tr('Search this case'); search.setAttribute('aria-label', search.placeholder);
+  function filter() {
+    const q = search.value.trim().toLowerCase();
+    Object.values(KINDS).forEach(k => { const l = document.getElementById(k.anchor); if (l) [...l.children].forEach(el => { el.classList.toggle('case-hide', !!q && !el.textContent.toLowerCase().includes(q)); }); });
+  }
+  search.addEventListener('input', filter);
+  if (main) main.prepend(search);
   document.addEventListener('themis-lang', () => {
     document.querySelectorAll('.author-add').forEach(b => { b.textContent = '+ ' + tr(b.dataset.label); });
     document.querySelectorAll('.author-row button').forEach(b => { b.textContent = tr(b.dataset.label); });
+    search.placeholder = tr('Search this case'); search.setAttribute('aria-label', search.placeholder);
   });
 })();

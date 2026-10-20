@@ -1368,6 +1368,8 @@ details.draft .d-kind,
 .page > footer { letter-spacing: 0; font-size: 12px; }
 
 /* v9 authoring: + Add buttons under lawyers and timeline, and their dialog */
+.case-search{display:block;width:100%;box-sizing:border-box;min-height:48px;margin:0 0 var(--s-3,16px);padding:0 20px;border-radius:999px;border:1px solid color-mix(in srgb,CanvasText 25%,transparent);background:Canvas;color:CanvasText;font:inherit}
+.case-hide{display:none!important}
 .author-add{margin-top:var(--s-2,8px);min-height:48px;padding:0 20px;border-radius:999px;border:1px solid currentColor;background:none;color:var(--accent,inherit);font:inherit;cursor:pointer}
 .author-dlg{border:0;border-radius:16px;padding:24px;width:min(92vw,380px);background:Canvas;color:CanvasText}
 .author-dlg::backdrop{background:rgba(0,0,0,.5)}

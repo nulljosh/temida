@@ -4,15 +4,21 @@ struct CaseTabView: View {
     @Environment(Store.self) private var store
     @State private var expandedGround: String? = nil
 
-    private var facts:     [CaseFact] {
+    private var allFacts:  [CaseFact] {
         switch store.activeCase { case .rcmp: return caseFacts; case .family: return familyCaseFacts; case .muni: return muniCaseFacts; case .bylaw: return bylawCaseFacts }
     }
-    private var witnesses: [Witness] {
+    private var allWitnesses: [Witness] {
         switch store.activeCase { case .rcmp: return caseWitnesses; case .family: return familyCaseWitnesses; case .muni: return muniCaseWitnesses; case .bylaw: return bylawCaseWitnesses }
     }
-    private var grounds:   [Ground] {
+    private var allGrounds: [Ground] {
         switch store.activeCase { case .rcmp: return caseGrounds; case .family: return familyCaseGrounds; case .muni: return muniCaseGrounds; case .bylaw: return bylawCaseGrounds }
     }
+    // v11: search the open case. Runs on the device only; nothing is sent anywhere.
+    @State private var query = ""
+    private func hit(_ parts: String...) -> Bool { query.isEmpty || parts.contains { $0.localizedCaseInsensitiveContains(query) } }
+    private var facts: [CaseFact] { allFacts.filter { hit($0.key, $0.value) } }
+    private var witnesses: [Witness] { allWitnesses.filter { hit($0.name, $0.role, $0.statement) } }
+    private var grounds: [Ground] { allGrounds.filter { hit($0.title, $0.section, $0.description) } }
     private var navTitle: String { caseFragments.isEmpty && !briefTitle.isEmpty ? briefTitle : store.activeCase.title } // the owner keeps the case number
 
     var body: some View {
@@ -20,17 +26,11 @@ struct CaseTabView: View {
             ScrollView {
                 VStack(spacing: 20) {
 
-                    CoverHeaderView()
-
-                    // Limitation / notice banner
-                    LimitationBannerView()
-
-                    // Value belt
-                    ValueBeltView()
-
-                    // Muni notice card
-                    if store.activeCase == .muni {
-                        NoticeCardView()
+                    if query.isEmpty { // a search shows only what matches
+                        CoverHeaderView()
+                        LimitationBannerView()
+                        ValueBeltView()
+                        if store.activeCase == .muni { NoticeCardView() }
                     }
 
                     if !facts.isEmpty {
@@ -70,13 +70,15 @@ struct CaseTabView: View {
                         }
                     }
 
-                    if store.activeCase == .rcmp {
+                    if store.activeCase == .rcmp && query.isEmpty {
                         section("Journal", roman: "§4", hint: "supports continuity") {
                             JournalView()
                         }
                     }
 
-                    if facts.isEmpty && witnesses.isEmpty && grounds.isEmpty && store.activeCase.timeline.isEmpty {
+                    if !query.isEmpty && facts.isEmpty && witnesses.isEmpty && grounds.isEmpty {
+                    ContentUnavailableView.search(text: query)
+                } else if query.isEmpty && facts.isEmpty && witnesses.isEmpty && grounds.isEmpty && store.activeCase.timeline.isEmpty {
                         ContentUnavailableView("Nothing in this brief yet", systemImage: "doc.text",
                             description: Text("Use + to add a fact, a deadline, a witness or a ground."))
                     }
@@ -85,6 +87,7 @@ struct CaseTabView: View {
                 .padding(.bottom, 32)
             }
             .navigationTitle(navTitle)
+            .searchable(text: $query, prompt: "Search this case")
             .toolbar { ToolbarItem(placement: .primaryAction) { AddToCaseMenu() } }
             .toolbarTitleMenu {
                 if CaseID.shown.count > 1 { Picker("Case", selection: Binding(get: { store.activeCase }, set: { store.activeCase = $0 })) { ForEach(CaseID.shown) { Text($0.title).tag($0) } } }

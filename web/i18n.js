@@ -24,7 +24,7 @@
   // English never fetches it.
   var LANGS = ['fr', 'es', 'zh-Hans', 'zh-Hant', 'pa'], T = {}, cur = 'en', loading;
   function load() {
-    return loading || (loading = fetch('i18n.json?v=10').then(function (r) { return r.json(); }).then(function (j) { T = j; }).catch(function () {}));
+    return loading || (loading = fetch('i18n.json?v=11').then(function (r) { return r.json(); }).then(function (j) { T = j; }).catch(function () {}));
   }
   // Sign-in modal: static text translated by its English source; auth.js calls temidaT() for the rest.
   var AUTH = [['#authModalClose', 'label'], ['#authEmail', 'ph'], ['#authFormEmail .auth-btn'], ['#authPassword', 'ph'],

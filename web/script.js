@@ -929,7 +929,7 @@ window.briefOpenCase = setActiveCase;
 window.briefRefresh = async () => { await fetchCaseData(); setActiveCase(webActiveCase); }; // author.js after a save
 
 document.body.appendChild(Object.assign(document.createElement('script'), { src: 'webmcp.js?v=2' }));
-document.body.appendChild(Object.assign(document.createElement('script'), { src: 'author.js?v=7' }));
+document.body.appendChild(Object.assign(document.createElement('script'), { src: 'author.js?v=8' }));
 
 // ===== LANGUAGE =====
 // i18n.js fires 'themis-lang' after every language change; script.js rebuilds only what holds its own fixed words.

@@ -2,6 +2,9 @@
 
 ## [v6.4.0] - 2026-10-19
 
+### Search
+- Search the open case on web, iPhone and Mac. It filters facts, witnesses and grounds (and deadlines and lawyers on the web) on the device; nothing is sent anywhere.
+
 ### Deadlines worked out from BC law
 - A deadline can follow a rule: the 2-year basic or 15-year ultimate limitation period (Limitation Act, BC) or the 2-month notice to a municipality (Local Government Act, BC). Enter the start date and the due date and the section it comes from are saved with it. Web, iPhone and Mac.
 - Deadline dates show in the viewer's language. In the apps a deadline can go to Reminders or Calendar from its long-press menu, and a reminder moves when its deadline is edited.

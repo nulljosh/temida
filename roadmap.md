@@ -28,7 +28,7 @@ and cannot read its event back, so a Calendar copy stays where it was). ~~A disc
 
 **v11 to v20: the paper.** Documents with real files (PDF, photos), OCR, attach to facts. Evidence
 timeline. Export a clean PDF brief for counsel. Share a read-only, expiring link scoped to one case.
-~~Promo video on the landing~~ (made 2026-10-19 from tools/demo-brief.json, then taken off the landing at Joshua's request; demo mode stays for store screenshots). Search across everything.
+~~Promo video on the landing~~ (made 2026-10-19 from tools/demo-brief.json, then taken off the landing at Joshua's request; demo mode stays for store screenshots). ~~Search across everything~~ (started 2026-10-19: search the open case on web, iPhone and Mac, on the device only; journal and documents next).
 
 **v21 to v40: counsel and courts.** Lawyer outreach tracker with email templates. CanLII search on
 web and Mac. Forms for BC Civil Resolution Tribunal and Small Claims. Court filing checklists.
