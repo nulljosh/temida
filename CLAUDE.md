@@ -1,6 +1,6 @@
 # Temida
 
-v6.4.0. Cross-platform litigation tool (ex-Themis, ex-Atticus, ex-Litigate; renamed Temida 2026-10-19 because "Themis" is taken on the App Store). Web + iOS + macOS. Public repo `nulljosh/temida`.
+v11.0.0. Cross-platform litigation tool (ex-Themis, ex-Atticus, ex-Litigate; renamed Temida 2026-10-19 because "Themis" is taken on the App Store). Web + iOS + macOS. Public repo `nulljosh/temida`.
 
 ## Cases
 Four case slots: CASE-0001 to CASE-0004. What is in them lives only in the owner's `brief_data` rows,

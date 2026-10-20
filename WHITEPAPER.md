@@ -1,6 +1,6 @@
 # Temida Technical Whitepaper
 
-**v6.4.0** | October 2026
+**v11.0.0** | October 2026
 
 Going to court without a lawyer is a lot of paper, spread across timelines,
 grounds and documents that a caseworker or lawyer would normally track for

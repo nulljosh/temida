@@ -1,11 +1,11 @@
 <img src="web/icon.svg" width="80" style="border-radius:18px">
 
-![version](https://img.shields.io/badge/version-v6.4.0-blue) ![platform](https://img.shields.io/badge/platform-Web%20%7C%20iOS%20%7C%20macOS-lightgrey) ![license](https://img.shields.io/badge/license-Apache%202.0-blue)
+![version](https://img.shields.io/badge/version-v11.0.0-blue) ![platform](https://img.shields.io/badge/platform-Web%20%7C%20iOS%20%7C%20macOS-lightgrey) ![license](https://img.shields.io/badge/license-Apache%202.0-blue)
 
 Going to court without a lawyer is a lot of paper. Temida keeps it in one place. Formerly Themis, Atticus and Litigate.
 
 Sign in and keep your own cases: facts, grounds, witnesses, damages scenarios, lawyers,
-timeline and next steps. Add facts, deadlines and lawyers yourself from the + button. Each
+timeline and next steps. Add facts, grounds, witnesses, deadlines and lawyers yourself, search everything, and print a PDF for counsel. Each
 account sees only its own briefs. In six languages: English, French, Spanish, Chinese
 (simplified and traditional) and Punjabi.
 
@@ -34,7 +34,10 @@ All three sign in and sync through jaybulb-api (api.jaybulb.com, Cloudflare Work
 ## Features
 
 - Case: cover sheet, limitation clock, facts, witnesses, grounds, journal
-- Add to case: facts, deadlines and lawyers from the + button (apps); lawyers and deadlines on the web
+- Add to case: facts, grounds, witnesses, deadlines and lawyers on every platform, with Edit and Remove
+- Deadlines: pick a BC rule (2-year basic, 15-year ultimate, 2-month notice to a city) and the due date and cite fill in
+- Search: one box for the case, the journal and the documents, on the device only
+- PDF: Print on the web, Share as PDF in the apps
 - Tasks: open steps first, sent to Reminders or Calendar in one tap
 - Money: scenarios, damage heads, comparable awards
 - Files: documents, and CanLII case-law search (iPhone only)
