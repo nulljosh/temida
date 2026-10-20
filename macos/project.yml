@@ -42,6 +42,7 @@ targets:
         CFBundleShortVersionString: "$(MARKETING_VERSION)"
         CFBundleVersion: "$(CURRENT_PROJECT_VERSION)"
         ITSAppUsesNonExemptEncryption: false
+        LSApplicationCategoryType: public.app-category.productivity # required for Mac App Store uploads (ITMS-90242)
         NSRemindersFullAccessUsageDescription: "Temida adds the next steps you choose to Reminders."
         NSCalendarsWriteOnlyAccessUsageDescription: "Temida adds the next steps you choose to your calendar."
         CFBundleURLTypes:

@@ -13,17 +13,17 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 - iPhone QA: all four tabs checked on the demo file (`-demoFile`). Mac QA: all five panels checked with `-demoJSON`; see `macos/CLAUDE.md` for the launch line. Both use fictional data only.
 - Web translations: every editing label, the search box and the BC rule labels translate in all six languages; `node tests/web/i18n.mjs` guards it. The landing kicker says Temida in every language.
 - `asc` needs `ASC_BYPASS_KEYCHAIN=1`, or it hangs on a keychain password dialog. iPhone 1.1.0 was rejected 2026-10-19 under 2.3.3 (screenshots showed only sign-in). New iPhone and iPad screenshots of the demo case went up and 1.1.0 is Waiting for Review again. An empty draft submission (1281a882) is left over and harmless.
+- Mac 1.1.0 is the first Mac App Store version, Waiting for Review since 2026-10-19. Built headless with `xcodebuild -allowProvisioningUpdates` and the API key (asc signing fetch trips on a deleted profile). `LSApplicationCategoryType` is now in `macos/project.yml`; without it the upload fails processing with 90242.
 - Docs, README, WHITEPAPER and `architecture.svg` are current for v11. The repo has 0 open issues and no stale branches.
 - Tests: `node tests/web/save.mjs`, `grounds.mjs`, `deadlines.mjs` and `search.mjs` on the QA account in `.env.qa`. `owner.mjs` prints booleans only. Never screenshot the owner's signed-in page.
 
 ## Next, in order
 
-1. The Mac App Store record and the first Mac build.
-2. Watch iPhone 1.1.0 in review. If Apple writes back, Joshua sees the reply before anything is sent.
-3. App Privacy answers and the privacy URL with the next store version.
-4. A VoiceOver walk on a real device.
-5. Real files and OCR in Files waits on Joshua's call. Do not start it.
-6. Keep simplifying the UI. Roadmap to v100 is in `roadmap.md`.
+1. Watch iPhone and Mac 1.1.0 in review. If Apple writes back, Joshua sees the reply before anything is sent.
+2. App Privacy answers and the privacy URL with the next store version.
+3. A VoiceOver walk on a real device.
+4. Real files and OCR in Files waits on Joshua's call. Do not start it.
+5. Keep simplifying the UI. Roadmap to v100 is in `roadmap.md`.
 
 ## Restart prompt
 
