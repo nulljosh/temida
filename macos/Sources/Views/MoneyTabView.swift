@@ -100,24 +100,6 @@ struct MoneyTabView: View {
 
                     if muni {
                         proseCard(frag(.muni).prose["settlesTitle"] ?? "", frag(.muni).prose["settles"])
-                        SectionCard("Damages claimed") {
-                            VStack(spacing: 0) {
-                                ForEach(activeDamageHeads) { h in
-                                    HStack(alignment: .top, spacing: 12) {
-                                        Text(h.head).font(.temidaText(13).weight(.semibold)).frame(maxWidth:.infinity,alignment:.leading).lineSpacing(2)
-                                        Text(h.range).font(.temidaText(13).weight(.semibold)).foregroundStyle(.briefWarn).frame(width:rangeWidth,alignment:.trailing)
-                                    }
-                                    .padding(.vertical,11)
-                                    .accessibilityElement(children: .combine)
-                                    Divider()
-                                }
-                                HStack {
-                                    Text("Net range").font(.temidaText(13).weight(.bold)).foregroundStyle(.secondary)
-                                    Spacer()
-                                    Text(verbatim: formatRange(low: stackLow, high: stackHigh)).font(.temidaText(18, design: .rounded).weight(.bold)).foregroundStyle(.briefGreen)
-                                }.padding(.top,14)
-                            }
-                        }
                     } else if rcmp {
                         SectionCard("Comparable cases · Canada") {
                             VStack(spacing: 0) {
@@ -160,11 +142,6 @@ struct MoneyTabView: View {
                                     .accessibilityElement(children: .combine)
                                     Divider()
                                 }
-                                HStack {
-                                    Text("Net range").font(.temidaText(13).weight(.bold)).foregroundStyle(.secondary)
-                                    Spacer()
-                                    Text(verbatim: formatRange(low: stackLow, high: stackHigh)).font(.temidaText(18, design: .rounded).weight(.bold)).foregroundStyle(.briefGreen)
-                                }.padding(.top,14)
                             }
                         }
                     }

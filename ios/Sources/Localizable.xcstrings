@@ -3283,41 +3283,6 @@
         }
       }
     },
-    "Net range": {
-      "extractionState": "manual",
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Fourchette nette"
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Rango neto"
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "净额范围"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "淨額範圍"
-          }
-        },
-        "pa": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ਕੁੱਲ ਰੇਂਜ"
-          }
-        }
-      }
-    },
     "New Document": {
       "extractionState": "manual",
       "localizations": {
