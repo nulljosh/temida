@@ -2,7 +2,7 @@ import SwiftUI
 
 struct ContentView: View {
     @Environment(Store.self) private var store
-    @State private var selection: String? = "case"
+    @State private var selection: String? = UserDefaults.standard.string(forKey: "tab") ?? "case" // `-tab money` opens a panel for QA shots
 
     var body: some View {
         @Bindable var store = store
