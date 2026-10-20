@@ -59,11 +59,11 @@ struct MoneyTabView: View {
                             .padding(.vertical, 14)
                             if idx < scenarios.count - 1 { Divider() }
                         }
-                        Text(verbatim: frag(store.activeCase).belt)
+                        if !frag(store.activeCase).belt.isEmpty { Text(verbatim: frag(store.activeCase).belt)
                             .font(.temidaText(13))
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
-                            .padding(.top, 14)
+                            .padding(.top, 14) }
                     }
                     .padding(18)
                     .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
@@ -101,7 +101,7 @@ struct MoneyTabView: View {
                     if muni {
                         proseCard(frag(.muni).prose["settlesTitle"] ?? "", frag(.muni).prose["settles"])
                     } else if rcmp {
-                        SectionCard("Comparable cases · Canada") {
+                        if !caseComparables.isEmpty { SectionCard("Comparable cases · Canada") {
                             VStack(spacing: 0) {
                                 ForEach(caseComparables) { c in
                                     HStack(alignment: .top, spacing: 10) {
@@ -119,7 +119,7 @@ struct MoneyTabView: View {
                                     Divider()
                                 }
                             }
-                        }
+                        }}
 
                         proseCard("Ward framework", frag(.rcmp).prose["ward"])
 
