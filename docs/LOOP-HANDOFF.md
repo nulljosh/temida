@@ -6,33 +6,23 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 
 ## Where things stand
 
-- The landing and the signed-in web app run in six languages: English, French, Spanish, Simplified Chinese, Traditional Chinese and Punjabi. The signed-in shell has zero accessibility problems in an automated check, on light and dark, phone and desktop.
-- The landing is now temida.jaybulb.com. The old litigate and atticus hosts redirect there.
-- The repo is public since 2026-10-19 from one clean commit; the old history is in the private repo temida-private.
-- You can add facts, deadlines and lawyers to a case from the app. iPhone and Mac have a + menu on the Case tab, and the web has + Add buttons under the facts, the lawyers and the timeline. Each save reads the case fresh, adds one item and writes it back.
-- The demo scenarios showed 0 percent because of a demo data bug. That is fixed.
-- Docs for the web and iPhone are synced, and the v9 line in the roadmap is current.
-- The promo video was removed from the landing at Joshua's request. It must not come back.
-- The save test passed on the web and iPhone with the QA account in `.env.qa` (`node tests/web/save.mjs`). Check the owner's page with `tests/web/owner.mjs`, which prints only booleans. Never screenshot the owner's signed-in page.
-- Grounds and witnesses can be added on every platform (`node tests/web/grounds.mjs`).
-- v10 deadlines: a deadline can follow a BC rule (2-year basic, 15-year ultimate, 2-month municipal notice). The due date and cite are worked out once on save, on web, iPhone and Mac. `node tests/web/deadlines.mjs` checks the date math and a save on the QA account.
-- Still open for case authoring: the Mac save test and the items under "Case authoring, still open" in `roadmap.md`.
-- Earlier: the rename to Temida, the new logo on every icon, the onboarding and splash, the Profile with name and avatar, the Tasks tab, and the iPhone launch that dropped from 14 seconds to 4.
-- Repo: 0 open issues on GitHub. The four authoring items stay in `roadmap.md` until they are done, so mirroring them to issues was skipped.
+- v11.0.0. Search covers the case, the journal and the files on web, iPhone and Mac. Share as PDF and the BC deadline rules run on the device only.
+- The landing holds A+ on phone and desktop, light and dark: slate hero, parallax, footer shader, 0 leak terms, no video. The promo video must not come back.
+- Every brief list decodes lossy, nested ones too, so one bad row never drops a case.
+- The native declutter pass is done: plain section headers, no repeated Money totals, no empty cards, one menu per task, Mac panel titles that match the sidebar.
+- iPhone QA: all four tabs checked on the demo file (`-demoFile`). Mac QA: all five panels checked with `-demoJSON`; see `macos/CLAUDE.md` for the launch line. Both use fictional data only.
+- Docs, README, WHITEPAPER and `architecture.svg` are current for v11. The repo has 0 open issues and no stale branches.
+- Tests: `node tests/web/save.mjs`, `grounds.mjs`, `deadlines.mjs` and `search.mjs` on the QA account in `.env.qa`. `owner.mjs` prints booleans only. Never screenshot the owner's signed-in page.
 
 ## Next, in order
 
-1. The landing at A+ on phone and desktop, light and dark. It needs a real background (not plain white), parallax on the header, and the footer shader visible.
-2. Docs to 100 percent, and a refreshed `architecture.svg`.
-3. Bug hunt, the way the facts decoder bug was found. Make every brief array decode lossy. Fix case titles so they come from `fragments.native`.
-4. iPhone simulator QA with screenshots. No case content goes off the machine.
-5. The store name is Temida, locked 2026-10-19. Done.
-6. The Mac App Store record and the first Mac build.
-7. An iOS 1.1 build with the new name and icon. Screenshots use demo data only.
-8. Roadmap v8: empty states that say what to do next, haptics, and VoiceOver labels on every control.
-9. Roadmap v9: the four open authoring items above.
-10. Roadmap v10 is done. Next is v11: documents with real files (PDF, photos), attached to facts.
-11. Keep simplifying the UI.
+1. Declutter the signed-in web app, checked on the QA account only.
+2. The Mac App Store record and the first Mac build.
+3. An iOS 1.1 build with the new name and icon. Screenshots use demo data only.
+4. App Privacy answers and the privacy URL with the next store version.
+5. A VoiceOver walk on a real device.
+6. Real files and OCR in Files waits on Joshua's call. Do not start it.
+7. Keep simplifying the UI. Roadmap to v100 is in `roadmap.md`.
 
 ## Restart prompt
 
