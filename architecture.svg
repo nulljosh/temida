@@ -24,7 +24,7 @@
 
     <rect x="560" y="96" width="220" height="90" rx="14" fill="#f5f5f7"/>
     <text x="580" y="124" font-weight="600">Mac</text>
-    <text x="580" y="146" fill="#6e6e73">SwiftUI sidebar, adds Lawyers</text>
+    <text x="580" y="146" fill="#6e6e73">SwiftUI sidebar, Share as PDF</text>
     <text x="580" y="166" fill="#6e6e73">shares models and some views</text>
 
     <rect x="290" y="276" width="240" height="80" rx="14" fill="#2b3550"/>
@@ -45,5 +45,8 @@
     <text x="40" y="300">Signed out, the page is an</text>
     <text x="40" y="318">empty shell. Signed in, your</text>
     <text x="40" y="336">own rows fill it.</text>
+    <text x="40" y="384" font-weight="600" fill="#1d1d1f">On the device only</text>
+    <text x="40" y="402">search, PDF briefs and the</text>
+    <text x="40" y="420">BC deadline rules</text>
   </g>
 </svg>
