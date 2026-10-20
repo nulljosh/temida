@@ -18,7 +18,7 @@ needs the Mac record.
 what to do next~~ (done 2026-10-19: Case, Tasks, Money and Files). ~~Haptics~~ (done 2026-10-19: tab switch, task tick, save). VoiceOver: the icon-only controls are labelled; a full VoiceOver walk on a device is still open.
 
 **v9: write your own case.** Case-authoring on web and native: add facts, grounds, witnesses,
-lawyers, deadlines without touching the database. ~~Facts, deadlines and lawyers from the + menu in the iPhone and Mac apps~~ (done 2026-10-19). ~~Editing and removing~~ (done 2026-10-19: long press or right click in the apps, Edit and Remove on the web). Still to do: grounds and witnesses, and facts on the web (lawyers and deadlines have a web form; the web does not show `FACTS` yet). ~~New users get a guided first brief.~~ (onboarding shipped 2026-10-19)
+lawyers, deadlines without touching the database. ~~Facts, deadlines and lawyers from the + menu in the iPhone and Mac apps~~ (done 2026-10-19). ~~Editing and removing~~ (done 2026-10-19: long press or right click in the apps, Edit and Remove on the web). ~~Grounds, witnesses and facts on every platform~~ (done 2026-10-19). v9 is done. ~~New users get a guided first brief.~~ (onboarding shipped 2026-10-19)
 
 **v10: deadlines engine.** ~~Limitation clocks with the rule cited~~ (done 2026-10-19 on web, iPhone and Mac: pick
 the 2-year basic or 15-year ultimate period from the BC Limitation Act, or the 2-month notice to a municipality,
