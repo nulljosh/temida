@@ -146,6 +146,7 @@ body {
   transition: all 0.15s;
 }
 .strip-btn:hover { color: var(--ink); border-color: var(--ink); }
+.strip-btn { min-width: 44px; min-height: 44px; display: inline-flex; align-items: center; justify-content: center; } /* tap size */
 .strip-pill {
   display: inline-flex; align-items: center; gap: 6px;
   font-family: var(--sans); font-size: 11px;
@@ -1388,6 +1389,7 @@ details.draft .d-kind,
 .author-row{display:flex;gap:8px;margin-top:8px}
 .author-row button{min-height:32px;padding:0 12px;border-radius:999px;border:1px solid color-mix(in srgb,currentColor 25%,transparent);background:none;color:inherit;font:inherit;font-size:.85rem;cursor:pointer;opacity:.8}
 .author-row button:hover,.author-row button:focus-visible{opacity:1}
+@media (hover:none){.author-row button{min-height:44px;padding:0 16px}} /* touch: full tap size */
 /* with a mouse, Edit and Remove float bottom-right on the row being pointed at or focused; touch keeps them inline */
 @media (hover:hover){:is(#facts,#grounds-case,#witnesses,#timeline,#lawyers)>*{position:relative}:is(#facts,#grounds-case,#witnesses,#timeline,#lawyers)>:not(:hover):not(:focus-within) .author-row{opacity:0}.author-row{position:absolute;right:0;bottom:8px;margin:0;transition:opacity .15s}#lawyers .lawyer-body{position:relative}#lawyers .author-row{bottom:0}}
 

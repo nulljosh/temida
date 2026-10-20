@@ -4,9 +4,9 @@ const puppeteer = (await import(process.env.PUPPETEER || '/Users/joshua/Document
 import fs from 'fs'; import path from 'path';
 const WEB = new URL('../../web', import.meta.url).pathname;
 const TYPES = { '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.html': 'text/html', '.svg': 'image/svg+xml' };
-export async function open(creds, { local = true, width = 1280 } = {}) {
+export async function open(creds, { local = true, width = 1280, touch = false } = {}) {
   const b = await puppeteer.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: 'new' });
-  const p = await b.newPage(); await p.setViewport({ width, height: 900 });
+  const p = await b.newPage(); await p.setViewport({ width, height: 900, hasTouch: touch, isMobile: touch }); // touch: a phone, so (hover: none) matches
   const errors = [];
   p.on('pageerror', e => errors.push(e.stack.split('\n').slice(0, 3).join(' | ')));
   p.on('dialog', d => d.accept());

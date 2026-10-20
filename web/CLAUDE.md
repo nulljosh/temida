@@ -59,7 +59,7 @@ temp dir, injects `window.APP_CONFIG`, and calls `wrangler pages deploy`.
 
 ## Cache busting
 Bump the `?v=` on every CSS or JS file you change. Current values:
-- `index.html`: `tokens.css?v=4`, `style.css?v=85`, `footer-shader.js?v=2`, `i18n.js?v=14`, `auth.js?v=61`
+- `index.html`: `tokens.css?v=4`, `style.css?v=86`, `footer-shader.js?v=2`, `i18n.js?v=14`, `auth.js?v=61`
 - `auth.js` appends `script.js?v=56`. Bump it there, not in `index.html`.
 - `script.js` appends `webmcp.js?v=2` and `author.js?v=9`; `i18n.js` loads `i18n.json?v=12`.
 
