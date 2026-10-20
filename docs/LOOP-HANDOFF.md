@@ -1,4 +1,4 @@
-# Temida loop handoff (2026-10-19, evening)
+# Temida loop handoff (2026-10-19, night)
 
 ## What the loop is
 
@@ -11,6 +11,8 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 - Every brief list decodes lossy, nested ones too, so one bad row never drops a case.
 - The declutter pass is done on every platform. Web: Edit and Remove show on hover or focus. Native: plain section headers, no repeated Money totals, no empty cards, one menu per task, Mac panel titles that match the sidebar.
 - iPhone QA: all four tabs checked on the demo file (`-demoFile`). Mac QA: all five panels checked with `-demoJSON`; see `macos/CLAUDE.md` for the launch line. Both use fictional data only.
+- Web translations: every editing label, the search box and the BC rule labels translate in all six languages; `node tests/web/i18n.mjs` guards it. The landing kicker says Temida in every language.
+- Blocked: every `asc` command hangs on a macOS keychain password dialog for the App Store Connect key. Only Joshua can type that password. Until then skip store work.
 - Docs, README, WHITEPAPER and `architecture.svg` are current for v11. The repo has 0 open issues and no stale branches.
 - Tests: `node tests/web/save.mjs`, `grounds.mjs`, `deadlines.mjs` and `search.mjs` on the QA account in `.env.qa`. `owner.mjs` prints booleans only. Never screenshot the owner's signed-in page.
 
