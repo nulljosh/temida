@@ -3353,41 +3353,6 @@
         }
       }
     },
-    "No documents yet. Source files (photos/PDFs) stay off-platform — log what each document is and where it lives.": {
-      "extractionState": "manual",
-      "localizations": {
-        "fr": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aucun document pour l'instant. Les fichiers sources (photos, PDF) restent hors de l'app : notez ce qu'est chaque document et où il se trouve."
-          }
-        },
-        "es": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Aún no hay documentos. Los archivos originales (fotos, PDF) se quedan fuera de la app: anota qué es cada documento y dónde está."
-          }
-        },
-        "zh-Hans": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "还没有文档。原始文件（照片、PDF）不会上传到应用中，请记录每份文档是什么、存放在哪里。"
-          }
-        },
-        "zh-Hant": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "還沒有文件。原始檔案（照片、PDF）不會上傳到應用程式，請記錄每份文件是什麼、存放在哪裡。"
-          }
-        },
-        "pa": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "ਅਜੇ ਕੋਈ ਦਸਤਾਵੇਜ਼ ਨਹੀਂ। ਮੂਲ ਫਾਈਲਾਂ (ਫ਼ੋਟੋ, PDF) ਐਪ ਤੋਂ ਬਾਹਰ ਰਹਿੰਦੀਆਂ ਹਨ; ਦਰਜ ਕਰੋ ਕਿ ਹਰ ਦਸਤਾਵੇਜ਼ ਕੀ ਹੈ ਅਤੇ ਕਿੱਥੇ ਹੈ।"
-          }
-        }
-      }
-    },
     "Not contacted": {
       "extractionState": "manual",
       "localizations": {
@@ -8131,6 +8096,40 @@
           "stringUnit": {
             "state": "translated",
             "value": "ਫ਼ਾਈਲਾਂ ਵਿੱਚ ਖੋਜੋ"
+          }
+        }
+      }
+    },
+    "No documents yet. Log each letter, notice or receipt, and where the original lives.": {
+      "localizations": {
+        "fr": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aucun document pour l'instant. Notez chaque lettre, avis ou reçu, et l'endroit où se trouve l'original."
+          }
+        },
+        "es": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Aún no hay documentos. Anota cada carta, aviso o recibo, y dónde está el original."
+          }
+        },
+        "zh-Hans": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "还没有文件。记下每封信件、通知或收据，以及原件存放的位置。"
+          }
+        },
+        "zh-Hant": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "還沒有文件。記下每封信件、通知或收據，以及正本存放的位置。"
+          }
+        },
+        "pa": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "ਹਾਲੇ ਕੋਈ ਦਸਤਾਵੇਜ਼ ਨਹੀਂ। ਹਰ ਚਿੱਠੀ, ਨੋਟਿਸ ਜਾਂ ਰਸੀਦ ਦਰਜ ਕਰੋ, ਅਤੇ ਇਹ ਵੀ ਕਿ ਅਸਲ ਕਿੱਥੇ ਹੈ।"
           }
         }
       }

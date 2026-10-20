@@ -26,7 +26,7 @@ struct DocumentsView: View {
                 Spacer()
                 Button("+ Document") { showingForm = true }
                     .font(.temidaText(13).weight(.bold))
-                    .foregroundStyle(.briefGreen)
+                    .foregroundStyle(Color.brandSlate)
                     .accessibilityLabel("Add document")
             }
             .padding(.bottom, 14)
@@ -34,7 +34,7 @@ struct DocumentsView: View {
             if !query.isEmpty && entries.isEmpty {
                 ContentUnavailableView.search(text: query)
             } else if store.documentEntries.isEmpty {
-                Text("No documents yet. Source files (photos/PDFs) stay off-platform — log what each document is and where it lives.")
+                Text("No documents yet. Log each letter, notice or receipt, and where the original lives.")
                     .font(.temidaText(13))
                     .foregroundStyle(.secondary)
                     .padding(.vertical, 8)
