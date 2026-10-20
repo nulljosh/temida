@@ -20,7 +20,7 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 ## Next, in order
 
 1. Watch iPhone and Mac 1.1.0 in review. If Apple writes back, Joshua sees the reply before anything is sent.
-2. Check the privacy policy URL on the app info. App Privacy answers are published (email, name, photo, contact info, case content, user ID; all for app function, linked to the account, no tracking).
+2. App Privacy is published and the privacy URL (temida.jaybulb.com/privacy) is live on the version in review. Nothing to do until review answers.
 3. A VoiceOver walk on a real device.
 4. Real files and OCR in Files waits on Joshua's call. Do not start it.
 5. Keep simplifying the UI. Roadmap to v100 is in `roadmap.md`.
