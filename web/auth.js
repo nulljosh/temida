@@ -41,7 +41,7 @@ function loadApp() {
   window._sb = _client;
   window._userId = _uid;
   const s = document.createElement('script');
-  s.src = 'script.js?v=55';
+  s.src = 'script.js?v=56';
   document.body.appendChild(s);
 }
 

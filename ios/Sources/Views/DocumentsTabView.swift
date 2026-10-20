@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct DocumentsTabView: View {
+    @State private var query = ""
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -16,11 +17,12 @@ struct DocumentsTabView: View {
                     }
                     .buttonStyle(.plain)
                     #endif
-                    DocumentsView()
+                    DocumentsView(query: query)
                 }
                 .padding(.horizontal, 16).padding(.bottom, 32)
             }
             .navigationTitle("Files")
+            .searchable(text: $query, prompt: "Search files")
         }
     }
 }

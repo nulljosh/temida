@@ -6,6 +6,8 @@ struct DocumentsView: View {
     @State private var newDate = Date.now
     @State private var newTitle = ""
     @State private var newText = ""
+    var query = "" // v11: the Files tab search
+    private var entries: [DocumentEntry] { query.isEmpty ? store.documentEntries : store.documentEntries.filter { $0.title.localizedCaseInsensitiveContains(query) || $0.text.localizedCaseInsensitiveContains(query) } }
 
     private func fmt(_ iso: String) -> String {
         let f = DateFormatter(); f.dateFormat = "yyyy-MM-dd"
@@ -29,14 +31,16 @@ struct DocumentsView: View {
             }
             .padding(.bottom, 14)
 
-            if store.documentEntries.isEmpty {
+            if !query.isEmpty && entries.isEmpty {
+                ContentUnavailableView.search(text: query)
+            } else if store.documentEntries.isEmpty {
                 Text("No documents yet. Source files (photos/PDFs) stay off-platform — log what each document is and where it lives.")
                     .font(.temidaText(13))
                     .foregroundStyle(.secondary)
                     .padding(.vertical, 8)
             }
 
-            ForEach(Array(store.documentEntries.enumerated()), id: \.element.id) { idx, entry in
+            ForEach(Array(entries.enumerated()), id: \.element.id) { idx, entry in
                 VStack(alignment: .leading, spacing: 6) {
                     Text(fmt(entry.date))
                         .font(.temidaText(13))
@@ -60,7 +64,7 @@ struct DocumentsView: View {
                 .accessibilityAction(named: Text("Delete")) {
                     Task { await store.deleteDocumentEntry(date: entry.date, title: entry.title) }
                 }
-                if idx < store.documentEntries.count - 1 { Divider() }
+                if idx < entries.count - 1 { Divider() }
             }
         }
         .padding(Spacing.mdPlus)

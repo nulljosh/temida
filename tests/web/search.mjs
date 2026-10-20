@@ -2,7 +2,7 @@
 import assert from 'node:assert/strict';
 import { open, qa } from './harness.mjs';
 const { b, p, errors } = await open(qa(), { local: process.argv[2] !== 'live' });
-const shown = () => p.evaluate(() => [...document.querySelectorAll('#facts > *, #witnesses > *, #grounds-case > *, #timeline > *, #lawyers > *')]
+const shown = () => p.evaluate(() => [...document.querySelectorAll('#facts > *, #witnesses > *, #grounds-case > *, #timeline > *, #lawyers > *, #journalList > *, #documentsList > *')]
   .filter(e => e.getClientRects().length).map(e => e.textContent));
 const all = await shown();
 await p.type('.case-search', 'witness');

@@ -202,10 +202,12 @@
   // v11: search the open case. Filters the rows on the page; nothing is sent anywhere.
   const main = document.querySelector('.page > main'), search = document.createElement('input');
   search.type = 'search'; search.className = 'case-search'; search.placeholder = tr('Search this case'); search.setAttribute('aria-label', search.placeholder);
+  const lists = [...Object.values(KINDS).map(k => k.anchor), 'journalList', 'documentsList'];
   function filter() {
     const q = search.value.trim().toLowerCase();
-    Object.values(KINDS).forEach(k => { const l = document.getElementById(k.anchor); if (l) [...l.children].forEach(el => { el.classList.toggle('case-hide', !!q && !el.textContent.toLowerCase().includes(q)); }); });
+    lists.forEach(id => { const l = document.getElementById(id); if (l) [...l.children].forEach(el => { el.classList.toggle('case-hide', !!q && !el.textContent.toLowerCase().includes(q)); }); });
   }
+  ['journalList', 'documentsList'].forEach(id => { const l = document.getElementById(id); if (l) new MutationObserver(filter).observe(l, { childList: true }); });
   search.addEventListener('input', filter);
   if (main) main.prepend(search);
   document.addEventListener('themis-lang', () => {

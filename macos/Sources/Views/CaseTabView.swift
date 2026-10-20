@@ -20,6 +20,7 @@ struct CaseTabView: View {
     private var facts: [CaseFact] { allFacts.filter { hit($0.key, $0.value) } }
     private var witnesses: [Witness] { allWitnesses.filter { hit($0.name, $0.role, $0.statement) } }
     private var grounds: [Ground] { allGrounds.filter { hit($0.title, $0.section, $0.description) } }
+    private var journalHit: Bool { query.isEmpty || store.journalEntries.contains { hit($0.text) } }
 
     var body: some View {
         ScrollView {
@@ -68,11 +69,11 @@ struct CaseTabView: View {
                     }
                 }
 
-                if rcmp && query.isEmpty {
-                    section("Journal", roman: "§4") { JournalView() }
+                if rcmp && journalHit {
+                    section("Journal", roman: "§4") { JournalView(query: query) }
                 }
 
-                if !query.isEmpty && facts.isEmpty && witnesses.isEmpty && grounds.isEmpty {
+                if !query.isEmpty && facts.isEmpty && witnesses.isEmpty && grounds.isEmpty && !(rcmp && journalHit) {
                     ContentUnavailableView.search(text: query)
                 } else if query.isEmpty && facts.isEmpty && witnesses.isEmpty && grounds.isEmpty && store.activeCase.timeline.isEmpty {
                     ContentUnavailableView("Nothing in this brief yet", systemImage: "doc.text",

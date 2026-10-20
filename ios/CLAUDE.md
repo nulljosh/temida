@@ -31,7 +31,7 @@ or `MuniCaseData.swift` is hardcoded case content; only types and empty containe
 - `Sources/Models/BriefPDF.swift`: v11 Share as PDF; CoreText pages drawn on the device, no UIKit, so `tests/main.swift` checks the paging. Its case-data init sits at the end of `CaseData.swift`
 - `Sources/Models/Spacing.swift`: the spacing scale (`Spacing.xs`, `sm`, `md`, ...)
 - `Sources/Views/DocumentsTabView.swift`: Files tab: a "Search case law" link (iPhone only) above `DocumentsView`
-- `Sources/Views/DocumentsView.swift`: "Case Documents" list and the New Document form
+- `Sources/Views/DocumentsView.swift`: "Case Documents" list and the New Document form; the Files tab search narrows it
 - `Sources/Views/CallScriptView.swift`: the call script for the open case
 - `Sources/Views/ChecklistView.swift`: evidence checklist with now and soon priorities and done state
 - `Sources/Models/Store+Authoring.swift`: v9 adds, edits and removes facts, deadlines, lawyers, grounds and witnesses in the open case. Reads the raw `cases` row, finds the row by content (fact key and value, deadline title and when, lawyer and ground id, witness name, role and statement), changes it, writes the whole value back, so keys the typed models skip survive

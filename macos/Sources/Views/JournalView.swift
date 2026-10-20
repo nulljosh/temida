@@ -6,6 +6,8 @@ struct JournalView: View {
     @State private var editingEntry: JournalEntry? = nil
     @State private var newDate = Date.now
     @State private var newText = ""
+    var query = "" // v11: the Case tab search narrows the journal too
+    private var entries: [JournalEntry] { query.isEmpty ? store.journalEntries : store.journalEntries.filter { $0.text.localizedCaseInsensitiveContains(query) } }
 
     private let seedDates: Set<String> = Set(journalSeed.map(\.date))
 
@@ -31,7 +33,7 @@ struct JournalView: View {
             }
             .padding(.bottom, 14)
 
-            ForEach(Array(store.journalEntries.enumerated()), id: \.element.id) { idx, entry in
+            ForEach(Array(entries.enumerated()), id: \.element.id) { idx, entry in
                 HStack(alignment: .top) {
                     VStack(alignment: .leading, spacing: 6) {
                         Text(fmt(entry.date))
@@ -68,7 +70,7 @@ struct JournalView: View {
                 }
                 .padding(.vertical, 14)
                 .accessibilityElement(children: .contain)
-                if idx < store.journalEntries.count - 1 { Divider() }
+                if idx < entries.count - 1 { Divider() }
             }
         }
         .padding(18)
