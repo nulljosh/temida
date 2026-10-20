@@ -33,7 +33,7 @@ struct CaseTabView: View {
                 }
 
                 if !facts.isEmpty {
-                    section("Facts", roman: "§1") {
+                    section("Facts") {
                         LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())], spacing: 14) {
                             ForEach(facts) { fact in
                                 VStack(alignment: .leading, spacing: 4) {
@@ -56,13 +56,13 @@ struct CaseTabView: View {
                 }
 
                 if !witnesses.isEmpty {
-                    section("Witnesses", roman: "§2") {
+                    section("Witnesses") {
                         ForEach(witnesses) { WitnessCardView(witness: $0).caseItemMenu(CaseItem($0)) }
                     }
                 }
 
                 if !grounds.isEmpty {
-                    section("Legal grounds", roman: "§3", hint: "click to expand") {
+                    section("Legal grounds") {
                         VStack(spacing: 6) {
                             ForEach(grounds) { GroundRowView(ground: $0, expandedId: $expandedGround).caseItemMenu(CaseItem($0)) }
                         }
@@ -70,7 +70,7 @@ struct CaseTabView: View {
                 }
 
                 if rcmp && journalHit {
-                    section("Journal", roman: "§4") { JournalView(query: query) }
+                    section("Journal") { JournalView(query: query) }
                 }
 
                 if !query.isEmpty && facts.isEmpty && witnesses.isEmpty && grounds.isEmpty && !(rcmp && journalHit) {
@@ -95,14 +95,10 @@ struct CaseTabView: View {
     }
 
     @ViewBuilder
-    private func section<C: View>(_ label: LocalizedStringKey, roman: String? = nil, hint: LocalizedStringKey? = nil, @ViewBuilder content: () -> C) -> some View {
+    private func section<C: View>(_ label: LocalizedStringKey, @ViewBuilder content: () -> C) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(alignment: .firstTextBaseline) {
-                if let roman { Text(verbatim: roman).font(.temidaText(13).weight(.medium)).foregroundStyle(Color.briefDanger) }
-                Text(label).font(.temidaText(13).weight(.bold)).foregroundStyle(.secondary).accessibilityAddTraits(.isHeader)
-                if let hint { Spacer(); Text(hint).font(.temidaText(13)).foregroundStyle(.tertiary) }
-            }
-            .padding(.horizontal, 4)
+            Text(label).font(.temidaText(13).weight(.bold)).foregroundStyle(.secondary).accessibilityAddTraits(.isHeader)
+                .padding(.horizontal, 4)
             content()
         }
     }

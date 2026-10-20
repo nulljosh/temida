@@ -13,7 +13,7 @@ struct ActionsTabView: View {
                     if !store.activeCase.lawyers.isEmpty { lawyersSection }
                     strategySection
                     if !store.activeCase.timeline.isEmpty { timelineSection }
-                    if !store.activeCase.checklist.isEmpty { SectionCard("Evidence checklist", roman: "§13") { ChecklistView() } }
+                    if !store.activeCase.checklist.isEmpty { SectionCard("Evidence checklist") { ChecklistView() } }
                     if rcmp {
                         if !callScript.isEmpty { CallScriptView(text: callScript, title: "Callback prep") }
                         if !outreachEmail.isEmpty { CallScriptView(text: outreachEmail, title: "Outreach email") }
