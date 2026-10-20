@@ -42,6 +42,8 @@
 	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>ITSAppUsesNonExemptEncryption</key>
 	<false/>
+	<key>LSApplicationCategoryType</key>
+	<string>public.app-category.productivity</string>
 	<key>NSCalendarsWriteOnlyAccessUsageDescription</key>
 	<string>Temida adds the next steps you choose to your calendar.</string>
 	<key>NSRemindersFullAccessUsageDescription</key>
