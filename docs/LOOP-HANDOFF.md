@@ -12,14 +12,14 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 - The declutter pass is done on every platform. Web: Edit and Remove show on hover or focus. Native: plain section headers, no repeated Money totals, no empty cards, one menu per task, Mac panel titles that match the sidebar.
 - iPhone QA: all four tabs checked on the demo file (`-demoFile`). Mac QA: all five panels checked with `-demoJSON`; see `macos/CLAUDE.md` for the launch line. Both use fictional data only.
 - Web translations: every editing label, the search box and the BC rule labels translate in all six languages; `node tests/web/i18n.mjs` guards it. The landing kicker says Temida in every language.
-- `asc` needs `ASC_BYPASS_KEYCHAIN=1`, or it hangs on a keychain password dialog. iPhone 1.1.0 (the Temida rename) was rejected 2026-10-19. The reason is only in the Resolution Center, which needs an Apple web session (`asc-login`, Joshua taps Allow). Do not resubmit unchanged and send nothing to Apple without his yes.
+- `asc` needs `ASC_BYPASS_KEYCHAIN=1`, or it hangs on a keychain password dialog. iPhone 1.1.0 was rejected 2026-10-19 under 2.3.3 (screenshots showed only sign-in). New iPhone and iPad screenshots of the demo case went up and 1.1.0 is Waiting for Review again. An empty draft submission (1281a882) is left over and harmless.
 - Docs, README, WHITEPAPER and `architecture.svg` are current for v11. The repo has 0 open issues and no stale branches.
 - Tests: `node tests/web/save.mjs`, `grounds.mjs`, `deadlines.mjs` and `search.mjs` on the QA account in `.env.qa`. `owner.mjs` prints booleans only. Never screenshot the owner's signed-in page.
 
 ## Next, in order
 
 1. The Mac App Store record and the first Mac build.
-2. Read why iPhone 1.1.0 was rejected, fix it, and resubmit with Joshua's yes. Screenshots use demo data only.
+2. Watch iPhone 1.1.0 in review. If Apple writes back, Joshua sees the reply before anything is sent.
 3. App Privacy answers and the privacy URL with the next store version.
 4. A VoiceOver walk on a real device.
 5. Real files and OCR in Files waits on Joshua's call. Do not start it.
