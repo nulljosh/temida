@@ -84,7 +84,13 @@ struct CaseTabView: View {
         }
         .navigationTitle(caseFragments.isEmpty && !briefTitle.isEmpty ? briefTitle : store.activeCase.title)
         .searchable(text: $query, prompt: "Search this case")
-        .toolbar { ToolbarItem(placement: .primaryAction) { AddToCaseMenu() } }
+        .toolbar {
+            ToolbarItem(placement: .primaryAction) { AddToCaseMenu() }
+            ToolbarItem(placement: .primaryAction) {
+                ShareLink(item: BriefPDF(title: caseFragments.isEmpty && !briefTitle.isEmpty ? briefTitle : store.activeCase.title, facts: allFacts, timeline: store.activeCase.timeline, witnesses: allWitnesses, grounds: allGrounds),
+                          preview: SharePreview("Brief")) { Label("Share as PDF", systemImage: "square.and.arrow.up") }
+            }
+        }
     }
 
     @ViewBuilder

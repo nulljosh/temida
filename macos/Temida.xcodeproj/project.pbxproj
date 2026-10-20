@@ -14,6 +14,7 @@
 		1A16DE5F10F27D71E8B7C2B1 /* TemidaSerif-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 205FB5BB03832F44C58460BD /* TemidaSerif-Semibold.ttf */; };
 		1CE25DAB77EFC331BCF1608B /* LimitationBannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 557578960B5A26DBEF0EEE29 /* LimitationBannerView.swift */; };
 		1FB3A315AB75F326A5933CA9 /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D933D2EADFD9A2FE3667F061 /* JournalView.swift */; };
+		21F7F532201BA70BF95636CA /* BriefPDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9699576164ED97E7EB3C5DD6 /* BriefPDF.swift */; };
 		26DE20D09FD3E62AAD9E689C /* DocumentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEC5B199860AD73E675E74B /* DocumentsView.swift */; };
 		28CD35300831F81533B92229 /* BriefApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AA33345A415D7CCE21559F /* BriefApp.swift */; };
 		2A1E40313979E8FDBCD66B5C /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = B851AC1001DC857F85749FF1 /* Localizable.xcstrings */; };
@@ -78,6 +79,7 @@
 		7726D77C0CF473D3C435AC77 /* CaseData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaseData.swift; sourceTree = "<group>"; };
 		7ECDD6A2C0F886F61EA0A661 /* LawyerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LawyerCardView.swift; sourceTree = "<group>"; };
 		8CE3CE5F0ECC84B75E51DF1D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		9699576164ED97E7EB3C5DD6 /* BriefPDF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BriefPDF.swift; sourceTree = "<group>"; };
 		A19775CEA35F5425527E7415 /* MoneyTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyTabView.swift; sourceTree = "<group>"; };
 		A2225A5DA530BC81879DA9C3 /* NextStepsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextStepsView.swift; sourceTree = "<group>"; };
 		A92E2B6E3E576227CD36BF48 /* CallScriptView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallScriptView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				08602ACA9550B1A2D182688D /* API.swift */,
+				9699576164ED97E7EB3C5DD6 /* BriefPDF.swift */,
 				EE35D9A17F3CFADB0ADEB1CE /* BylawCaseData.swift */,
 				7726D77C0CF473D3C435AC77 /* CaseData.swift */,
 				111F67B6353AB624E54CB66F /* CaseDataMapper.swift */,
@@ -281,6 +284,7 @@
 				955197C7A7906F4C28B17A7C /* ActionsTabView.swift in Sources */,
 				0B3EAE879DC186012F7A2DFE /* AddToCaseSheet.swift in Sources */,
 				28CD35300831F81533B92229 /* BriefApp.swift in Sources */,
+				21F7F532201BA70BF95636CA /* BriefPDF.swift in Sources */,
 				980972283EB61974C16902FD /* BylawCaseData.swift in Sources */,
 				3E6D4DFB6D360C9022F7CEA2 /* CallScriptView.swift in Sources */,
 				8B24A3A8CF8E087ED31DEB81 /* CaseData.swift in Sources */,

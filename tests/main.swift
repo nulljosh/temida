@@ -1,3 +1,4 @@
+import CoreGraphics
 import Foundation
 
 // Runnable check for the checklist id-block scheme. Not part of either app
@@ -58,6 +59,13 @@ check("notice: 2 months", Day.adding(months: LimitationRule.notice.months, to: "
 check("Feb 29 + 2 years is Feb 28", Day.adding(months: 24, to: "2024-02-29") == "2026-02-28")
 check("Dec 31 + 2 months is Feb 28", Day.adding(months: 2, to: "2025-12-31") == "2026-02-28")
 check("written date is English", Day.written(Day.date("2026-10-19")!) == "Oct 19, 2026")
+
+// v11: the PDF for counsel paginates and ends.
+let longBrief = BriefPDF(title: "Test brief", sections: [.init(heading: "Facts", lines: (1...300).map { "Fact \($0): a line of text" })])
+let pdfURL = try! longBrief.write()
+let pages = CGPDFDocument(pdfURL as CFURL)?.numberOfPages ?? 0
+check("long brief spans pages (\(pages))", pages > 1 && pages < 20)
+check("empty brief is one page", CGPDFDocument(try! BriefPDF(title: "x", sections: []).write() as CFURL)?.numberOfPages == 1)
 
 if failures > 0 {
     print("\(failures) check(s) FAILED")

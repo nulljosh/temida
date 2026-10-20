@@ -88,7 +88,13 @@ struct CaseTabView: View {
             }
             .navigationTitle(navTitle)
             .searchable(text: $query, prompt: "Search this case")
-            .toolbar { ToolbarItem(placement: .primaryAction) { AddToCaseMenu() } }
+            .toolbar {
+            ToolbarItem(placement: .primaryAction) { AddToCaseMenu() }
+            ToolbarItem(placement: .primaryAction) {
+                ShareLink(item: BriefPDF(title: navTitle, facts: allFacts, timeline: store.activeCase.timeline, witnesses: allWitnesses, grounds: allGrounds),
+                          preview: SharePreview("Brief")) { Label("Share as PDF", systemImage: "square.and.arrow.up") }
+            }
+            }
             .toolbarTitleMenu {
                 if CaseID.shown.count > 1 { Picker("Case", selection: Binding(get: { store.activeCase }, set: { store.activeCase = $0 })) { ForEach(CaseID.shown) { Text($0.title).tag($0) } } }
             }

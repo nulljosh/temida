@@ -28,6 +28,7 @@ or `MuniCaseData.swift` is hardcoded case content; only types and empty containe
 - `Sources/Models/BylawCaseData.swift`: empty `@MainActor` globals for CASE-0004 (the bylaw notice), filled at runtime
 - `Sources/Models/ChecklistIndex.swift`: checklist id blocks for `brief_checklist.item_index`; no imports, so `tests/main.swift` can compile it alone
 - `Sources/Models/Limitation.swift`: v10 deadline rules (BC Limitation Act s. 6(1) and 21(1), LGA s. 736(1)) and `Day` date helpers; no UIKit, so `tests/main.swift` compiles it. `web/author.js` `addMonths` does the same math
+- `Sources/Models/BriefPDF.swift`: v11 Share as PDF; CoreText pages drawn on the device, no UIKit, so `tests/main.swift` checks the paging. Its case-data init sits at the end of `CaseData.swift`
 - `Sources/Models/Spacing.swift`: the spacing scale (`Spacing.xs`, `sm`, `md`, ...)
 - `Sources/Views/DocumentsTabView.swift`: Files tab: a "Search case law" link (iPhone only) above `DocumentsView`
 - `Sources/Views/DocumentsView.swift`: "Case Documents" list and the New Document form

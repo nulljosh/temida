@@ -185,3 +185,16 @@ extension CaseID {
 @MainActor var caseTimeline: [TimelineStep] = []
 @MainActor var callScript: String = ""
 @MainActor var outreachEmail: String = ""
+
+// The PDF for counsel (BriefPDF.swift) built from one case's lists.
+extension BriefPDF {
+    init(title: String, facts: [CaseFact], timeline: [TimelineStep], witnesses: [Witness], grounds: [Ground]) {
+        func join(_ parts: String...) -> String { parts.filter { !$0.isEmpty }.joined(separator: " · ") }
+        self.init(title: title, sections: [
+            Section(heading: String(localized: "Facts"), lines: facts.map { "\($0.key): \($0.value)" }),
+            Section(heading: String(localized: "Deadlines"), lines: timeline.map { join("\($0.shown): \($0.title)", $0.description, $0.rule ?? "") }),
+            Section(heading: String(localized: "Witnesses"), lines: witnesses.map { join($0.name, $0.role, $0.date, $0.statement) }),
+            Section(heading: String(localized: "Legal grounds"), lines: grounds.map { join("\($0.number). \($0.title)", $0.section, $0.description) }),
+        ])
+    }
+}

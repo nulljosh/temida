@@ -4,6 +4,7 @@
 
 ### A clean PDF for counsel
 - Print on the web saves the brief as a clean PDF: no search box, no Edit, Remove or Add buttons.
+- Share as PDF on the Case tab in the iPhone and Mac apps: facts, deadlines, witnesses and grounds, made on the device.
 - Grounds added without a citation no longer show an empty grey box.
 
 ### Search

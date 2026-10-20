@@ -12,7 +12,7 @@ cd temida
 The checklist id check needs `ChecklistIndex.swift` compiled with it:
 
 ```
-swiftc -O ios/Sources/Models/ChecklistIndex.swift ios/Sources/Models/Limitation.swift tests/main.swift -o /tmp/clidx && /tmp/clidx
+swiftc -O ios/Sources/Models/ChecklistIndex.swift ios/Sources/Models/Limitation.swift ios/Sources/Models/BriefPDF.swift tests/main.swift -o /tmp/clidx && /tmp/clidx
 ```
 
 CI runs that from `.github/workflows/test.yml`. `node tools/test-leverage.mjs` checks the leverage math. CI does not run it.
