@@ -131,3 +131,4 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 
 ## Ingested 2026-10-21
 - [ ] Where is our account and data? What is our account? Show the signed-in account and where the case data lives. Sign in with Apple too? (Q: does this mean an account/settings screen, or the data location?)
+- [ ] Shouldn't scroll horizontally, only vertically.
