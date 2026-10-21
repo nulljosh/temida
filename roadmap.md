@@ -128,3 +128,7 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 
 ## TODO
 - Merge canlii-app (CanLII case-law search: API proxy + iOS + web) into litigate as a case-law search feature, instead of standalone project. canlii-app has its own ASC/api/web/ios — fold in, do not ship separately.
+
+## Ingested 2026-10-21
+- [ ] Sign in with Apple fails with "nonce mismatch" on the sign-in screen. (screenshot: notes/attachments/2026-10-21/temida-1.png)
+- [ ] Where is our account and data? What is our account? Show the signed-in account and where the case data lives. Sign in with Apple too? (Q: does this mean an account/settings screen, or the data location?)
