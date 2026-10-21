@@ -1,4 +1,4 @@
-# Temida loop handoff (2026-10-19, night)
+# Temida loop handoff (2026-10-21, morning)
 
 ## What the loop is
 
@@ -6,6 +6,7 @@ A `/loop` that moves Temida toward v100 one shippable step at a time. The landin
 
 ## Where things stand
 
+- Sign in with Apple now matches the token to the nonce it was hashed into, on iPhone and Mac. The roadmap item is closed.
 - v11.0.0. Search covers the case, the journal and the files on web, iPhone and Mac. Share as PDF and the BC deadline rules run on the device only.
 - The landing holds A+ on phone and desktop, light and dark: slate hero, parallax, footer shader, 0 leak terms, no video. The promo video must not come back.
 - Every brief list decodes lossy, nested ones too, so one bad row never drops a case.
