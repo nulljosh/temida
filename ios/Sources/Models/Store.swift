@@ -236,15 +236,13 @@ final class Store {
 
     // MARK: Sign in with Apple
 
-    private var currentNonce: String?
+    private var issuedNonces: [String] = []
 
     @MainActor func prepareAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
         let nonce = Self.randomNonce()
-        currentNonce = nonce
+        issuedNonces = Array((issuedNonces + [nonce]).suffix(5))
         request.requestedScopes = [.fullName, .email]
-        request.nonce = SHA256.hash(data: Data(nonce.utf8))
-            .map { String(format: "%02x", $0) }
-            .joined()
+        request.nonce = Self.hashed(nonce)
     }
 
     @MainActor func signInWithApple(result: Result<ASAuthorization, Error>) async {
@@ -252,9 +250,10 @@ final class Store {
         await attempt {
             guard let cred = try result.get().credential as? ASAuthorizationAppleIDCredential,
                   let tokenData = cred.identityToken,
-                  let token = String(data: tokenData, encoding: .utf8) else { throw URLError(.userAuthenticationRequired) }
-            try await api.signIn(provider: "apple", idToken: token, nonce: currentNonce)
-            currentNonce = nil
+                  let token = String(data: tokenData, encoding: .utf8),
+                  let nonce = Self.rawNonce(for: token, among: issuedNonces) else { throw URLError(.userAuthenticationRequired) }
+            try await api.signIn(provider: "apple", idToken: token, nonce: nonce)
+            issuedNonces = []
             // Apple shares the name only on the first sign-in; keep it as the profile name.
             let name = PersonNameComponentsFormatter().string(from: cred.fullName ?? .init())
             if !name.isEmpty { try? await api.updateProfile(["full_name": name]) }

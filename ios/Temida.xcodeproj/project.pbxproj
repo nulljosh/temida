@@ -49,6 +49,7 @@
 		C150A503F9A485D91EAAB632 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 51875AAA7BDAC4E46BDB31C6 /* InfoPlist.xcstrings */; };
 		C934F7DFD7F028F7F5C3C1EE /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08602ACA9550B1A2D182688D /* API.swift */; };
 		CB5A2F7227C2F18639F4F1C9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB028BD318054B3ACFC605 /* ProfileView.swift */; };
+		D35D53834AA3D7F7E4BCBC7C /* Store+AppleNonce.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B9AAFE835D5C993F3A9A82 /* Store+AppleNonce.swift */; };
 		D8B97893554D248E9E0CB516 /* Store+Authoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40CE8AE04DE6DC4CA35133DB /* Store+Authoring.swift */; };
 		DAA12FCBDE7167719E47D61C /* ValueBeltView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703CDC8DDCC5DDC58A6B9CC0 /* ValueBeltView.swift */; };
 		E09476E71089A185BD2E7FE1 /* Spacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 149C1F776067C58E9CB4C5A1 /* Spacing.swift */; };
@@ -102,6 +103,7 @@
 		B9B87A2342470BF701D407A2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BD3DAE2AE6AC94860A366CD9 /* BiometricLockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricLockView.swift; sourceTree = "<group>"; };
 		C04253BE3374939FD27564FD /* View+Glass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Glass.swift"; sourceTree = "<group>"; };
+		C9B9AAFE835D5C993F3A9A82 /* Store+AppleNonce.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Store+AppleNonce.swift"; sourceTree = "<group>"; };
 		D0F908211E086A5C456A3EC0 /* WitnessCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WitnessCardView.swift; sourceTree = "<group>"; };
 		D30C699541C910FAC06093D7 /* ActionsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsTabView.swift; sourceTree = "<group>"; };
 		D6D2FF5DAB2D788DFDC44619 /* DocumentsTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentsTabView.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				4EA1D3C55A4228A4F85177BA /* Planner.swift */,
 				149C1F776067C58E9CB4C5A1 /* Spacing.swift */,
 				1AB2CF1E29133E73B5856CD8 /* Store.swift */,
+				C9B9AAFE835D5C993F3A9A82 /* Store+AppleNonce.swift */,
 				40CE8AE04DE6DC4CA35133DB /* Store+Authoring.swift */,
 			);
 			path = Models;
@@ -350,6 +353,7 @@
 				815C1E88A9C21F3F8E013857 /* SectionCard.swift in Sources */,
 				7B5713FF52C391FA7555DE1B /* SignInView.swift in Sources */,
 				E09476E71089A185BD2E7FE1 /* Spacing.swift in Sources */,
+				D35D53834AA3D7F7E4BCBC7C /* Store+AppleNonce.swift in Sources */,
 				D8B97893554D248E9E0CB516 /* Store+Authoring.swift in Sources */,
 				3B47F3F744644F75EC526864 /* Store.swift in Sources */,
 				DAA12FCBDE7167719E47D61C /* ValueBeltView.swift in Sources */,
