@@ -132,3 +132,8 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 ## Ingested 2026-10-21
 - [ ] Where is our account and data? What is our account? Show the signed-in account and where the case data lives. Sign in with Apple too? (Q: does this mean an account/settings screen, or the data location?)
 - [ ] Shouldn't scroll horizontally, only vertically.
+
+## Ingested 2026-10-30
+- [ ] Needs one uniform font. The case header uses a serif next to the system sans. Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/temida-1.png
+- [ ] Tasks needs integration with iOS Reminders.
+- [ ] Remove the money bar graph animations.
