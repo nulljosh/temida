@@ -134,6 +134,4 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 - [ ] Shouldn't scroll horizontally, only vertically.
 
 ## Ingested 2026-10-30
-- [ ] Needs one uniform font. The case header uses a serif next to the system sans. Screenshot: ~/Documents/Code/notes/attachments/2026-10-30/temida-1.png
 - [ ] Tasks needs integration with iOS Reminders.
-- [ ] Remove the money bar graph animations.
