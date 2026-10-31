@@ -375,7 +375,7 @@ function renderGrounds(containerId, suffix) {
 
     const mag = document.createElement('div'); mag.className = 'ground-mag';
     const fill = document.createElement('div'); fill.className = 'ground-mag-fill';
-    fill.dataset.w = pct.toFixed(1);
+    fill.style.width = pct.toFixed(1) + '%';
     fill.style.background = 'var(--grade-' + g.grade.toLowerCase() + ')';
     mag.appendChild(fill);
 
@@ -408,7 +408,6 @@ function renderGrounds(containerId, suffix) {
       c.querySelectorAll('.ground').forEach(x => x.classList.remove('open'));
       if (!open) {
         w.classList.add('open');
-        w.querySelector('.ground-mag-fill').style.width = w.querySelector('.ground-mag-fill').dataset.w + '%';
       }
     });
   });
@@ -421,7 +420,7 @@ function renderScenarios() {
   if (!c) return;
   while (c.firstChild) c.removeChild(c.firstChild);
   const data = C().scenarios;
-  data.forEach((s,i) => {
+  data.forEach(s => {
     const d = document.createElement('div'); d.className = 'scen';
     const row = document.createElement('div'); row.className = 'scen-row';
     const left = document.createElement('div');
@@ -435,7 +434,7 @@ function renderScenarios() {
     row.appendChild(left); row.appendChild(right);
     const barTrack = document.createElement('div'); barTrack.className = 'bar-track';
     const barFill = document.createElement('div'); barFill.className = 'bar-fill';
-    barFill.dataset.w = s.pct; barFill.style.background = s.color; barFill.style.transitionDelay = (i*100) + 'ms';
+    barFill.style.width = s.pct + '%'; barFill.style.background = s.color;
     barTrack.appendChild(barFill);
     d.appendChild(row); d.appendChild(barTrack);
     c.appendChild(d);
@@ -463,15 +462,12 @@ function renderStack() {
     const sub = document.createElement('div'); sub.className = 'sub'; sub.textContent = h.sub;
     info.appendChild(lbl); info.appendChild(sub);
     const meter = document.createElement('div'); meter.className = 'meter';
-    const mFill = document.createElement('div'); mFill.dataset.w = pct.toFixed(1); mFill.style.background = 'var(--grade-' + h.grade.toLowerCase() + ')';
+    const mFill = document.createElement('div'); mFill.style.width = pct.toFixed(1) + '%'; mFill.style.background = 'var(--grade-' + h.grade.toLowerCase() + ')';
     meter.appendChild(mFill); mid.appendChild(info); mid.appendChild(meter);
     const amtEl = document.createElement('div'); amtEl.className = 'amt tnum'; amtEl.textContent = '$' + (v<1000 ? v+'k' : (v/1000).toFixed(2)+'M');
     r.appendChild(badge); r.appendChild(mid); r.appendChild(amtEl);
     c.appendChild(r);
   });
-  requestAnimationFrame(() => requestAnimationFrame(() => {
-    c.querySelectorAll('.meter > div').forEach(b => b.style.width = b.dataset.w + '%');
-  }));
 }
 renderStack();
 document.querySelectorAll('.stack-toggle button').forEach(b => {
@@ -793,16 +789,12 @@ async function loadDocumentsFromDB() {
   });
 })();
 
-function animateBars() {
-  document.querySelectorAll('#scenarios .bar-fill').forEach(b => b.style.width = b.dataset.w + '%');
-}
 document.querySelectorAll('.tab-btn').forEach(b => {
   b.addEventListener('click', e => {
     e.preventDefault();
     document.getElementById('panel-' + b.dataset.tab)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
-setTimeout(animateBars, 500);
 
 (function(){
   const mq = window.matchMedia('(prefers-color-scheme: light)');
@@ -950,7 +942,7 @@ function retranslate() {
   document.querySelectorAll('.cl-pri[data-pri]').forEach(e => { e.textContent = tr(e.dataset.pri); });
   document.querySelectorAll('.fit-dots[data-fit]').forEach(e => { e.title = tr('Case fit') + ' ' + e.dataset.fit + '/5'; });
   renderGrounds('grounds-case', ''); renderGrounds('grounds-money', '2');
-  renderScenarios(); animateBars();
+  renderScenarios();
   if (webActiveCase === 'rcmp') { renderScaleBands(); renderLeverage(); }
 }
 document.addEventListener('themis-lang', retranslate);
