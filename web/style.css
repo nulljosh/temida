@@ -318,7 +318,7 @@ body {
 .ground-grade.g-C { color: var(--grade-c); border-color: color-mix(in oklab, var(--grade-c) 40%, transparent); background: color-mix(in oklab, var(--grade-c) 10%, transparent); }
 .ground-grade.g-D { color: var(--grade-d); border-color: color-mix(in oklab, var(--grade-d) 40%, transparent); background: color-mix(in oklab, var(--grade-d) 10%, transparent); }
 .ground-mag { height: 2px; background: var(--rule); margin: 0 0 0 78px; }
-.ground-mag-fill { height: 100%; width: 0; transition: width 0.8s cubic-bezier(0.22,1,0.36,1); }
+.ground-mag-fill { height: 100%; width: 0; }
 .ground-body { max-height: 0; overflow: hidden; transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1); }
 .ground.open .ground-body { max-height: 900px; }
 .ground-inner { padding: 18px 0 24px 78px; display: grid; gap: 14px; }
@@ -358,7 +358,7 @@ body {
 .scen-amt { font-family: var(--sans); font-size: 16px; font-weight: 500; }
 .scen-pct { font-family: var(--sans); font-size: 11px; color: var(--muted); margin-top: 2px; letter-spacing: 0.06em; }
 .bar-track { height: 3px; background: var(--rule); overflow: hidden; border-radius: var(--radius-pill); }
-.bar-fill { height: 100%; width: 0; border-radius: var(--radius-pill); transition: width 1s cubic-bezier(0.22,1,0.36,1); }
+.bar-fill { height: 100%; width: 0; border-radius: var(--radius-pill); }
 
 /* Damages stack */
 .stack-tot { display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 24px; padding: 24px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
@@ -382,7 +382,7 @@ body {
 .stack-row .label { font-family: var(--sans); font-size: 15px; font-weight: 600; letter-spacing: -0.02em; }
 .stack-row .sub { font-family: var(--sans); font-size: 10.5px; color: var(--muted); letter-spacing: 0.04em; }
 .stack-row .meter { height: 3px; background: var(--rule); overflow: hidden; border-radius: var(--radius-pill); }
-.stack-row .meter > div { height: 100%; width: 0; border-radius: var(--radius-pill); transition: width 0.6s cubic-bezier(0.22,1,0.36,1); }
+.stack-row .meter > div { height: 100%; width: 0; border-radius: var(--radius-pill); }
 .stack-row .amt { font-family: var(--sans); font-size: 14px; font-weight: 500; text-align: right; }
 
 /* Scale */
@@ -420,7 +420,7 @@ body {
 .lev-bd-row .lev-pos { color: var(--good); }
 .lev-bar { position: relative; min-height: 60px; }
 .lev-bar-track { position: absolute; left: 0; right: 0; top: 4px; height: 6px; background: var(--rule); border-radius: var(--radius-pill); }
-.lev-bar-fill { position: absolute; left: 0; top: 4px; height: 6px; background: var(--danger); border-radius: var(--radius-pill); transition: width 0.6s cubic-bezier(0.22,1,0.36,1); }
+.lev-bar-fill { position: absolute; left: 0; top: 4px; height: 6px; background: var(--danger); border-radius: var(--radius-pill); }
 .lev-bar-marker { position: absolute; top: -2px; width: 14px; height: 14px; border-radius: 50%; background: var(--danger); border: 2px solid var(--bg); box-shadow: 0 0 0 4px var(--danger-soft); transform: translateX(-50%); transition: left 0.6s cubic-bezier(0.22,1,0.36,1); }
 .lev-bar-anchors { position: relative; margin-top: 22px; height: 16px; font-family: var(--sans); font-size: 10px; color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
 .lev-bar-anchors > span:first-child { position: absolute; left: 0; }
@@ -513,7 +513,7 @@ body {
 .cl-hd .l { font-family: var(--sans); font-size: 11px; color: var(--mid); }
 .cl-hd .c { font-family: var(--sans); font-size: 11px; font-weight: 500; }
 .cl-bar { height: 2px; background: var(--rule); border-radius: var(--radius-pill); overflow: hidden; margin-bottom: 10px; }
-.cl-bar > div { height: 100%; background: var(--good); width: 0; transition: width 0.5s ease; border-radius: var(--radius-pill); }
+.cl-bar > div { height: 100%; background: var(--good); width: 0; border-radius: var(--radius-pill); }
 .cl-list { border-top: 1px solid var(--rule); }
 .cl-item { display: grid; grid-template-columns: 22px 1fr auto auto; gap: 14px; padding: 13px 0; align-items: center; border-bottom: 1px solid var(--rule); cursor: pointer; user-select: none; transition: opacity 0.15s; }
 .cl-box { width: 18px; height: 18px; border-radius: 3px; border: 1.5px solid var(--rule-strong); display: flex; align-items: center; justify-content: center; transition: all 0.15s; }
