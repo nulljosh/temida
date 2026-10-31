@@ -1,5 +1,5 @@
 *, *::before, *::after { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; min-height: 100vh; -webkit-text-size-adjust: 100%; }
+html, body { margin: 0; padding: 0; min-height: 100vh; -webkit-text-size-adjust: 100%; overflow-x: clip; }
 /* Surfaces, text and type come from tokens.css — the shared house tokens served from
    jaybulb.com/tokens.css and consumed the same way by spark, wiretext and curvely.
    Everything below is an alias onto those, plus the status colours that carry litigation
