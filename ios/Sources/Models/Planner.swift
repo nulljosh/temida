@@ -3,8 +3,8 @@ import SwiftUI
 
 /// Brand slate from brand/BRAND.md; the light top of the icon gradient reads on dark backgrounds.
 extension Font {
-    /// Headlines in Temida Serif (Newsreader, OFL), the same face as the web. Scales with Dynamic Type.
-    static func temidaSerif(_ size: CGFloat) -> Font { .custom("TemidaSerif-Semibold", size: size, relativeTo: .title) }
+    /// Headlines in the system sans, semibold, so every screen uses one face. Scales with Dynamic Type.
+    static func temidaHeadline(_ size: CGFloat) -> Font { .system(textStyle(for: size), weight: .semibold) }
 
     /// Body copy written as a design size (13, 15, ...) but drawn as the matching text style, so it follows
     /// Dynamic Type on iOS. macOS text styles run smaller, so the same sizes map one step up there.

@@ -17,7 +17,7 @@ struct CoverHeaderView: View {
                 .fixedSize(horizontal: false, vertical: true)
 
             titleText
-                .font(.temidaSerif(28))
+                .font(.temidaHeadline(28))
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityAddTraits(.isHeader)
 

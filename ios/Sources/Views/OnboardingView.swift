@@ -16,7 +16,7 @@ struct SplashView: View {
                 .scaleEffect(settled ? 1 : 1.12)
                 .accessibilityHidden(true)
             Text("Temida")
-                .font(.temidaSerif(34))
+                .font(.temidaHeadline(34))
                 .opacity(settled ? 1 : 0)
                 .offset(y: settled ? 0 : 10)
         }
@@ -81,7 +81,7 @@ struct OnboardingView: View {
                 Image("BrandMark").resizable().renderingMode(.template)
                     .foregroundStyle(Color.brandSlate).frame(width: 64, height: 64)
                     .accessibilityHidden(true)
-                Text("Welcome to Temida").font(.temidaSerif(30)).accessibilityAddTraits(.isHeader)
+                Text("Welcome to Temida").font(.temidaHeadline(30)).accessibilityAddTraits(.isHeader)
                 Text("Your case, in one brief.").foregroundStyle(.secondary)
             }
             VStack(alignment: .leading, spacing: 18) {
@@ -133,7 +133,7 @@ struct OnboardingView: View {
 
     private func heading(_ title: LocalizedStringKey, _ sub: LocalizedStringKey) -> some View {
         VStack(spacing: 8) {
-            Text(title).font(.temidaSerif(26)).multilineTextAlignment(.center).accessibilityAddTraits(.isHeader)
+            Text(title).font(.temidaHeadline(26)).multilineTextAlignment(.center).accessibilityAddTraits(.isHeader)
             Text(sub).foregroundStyle(.secondary).multilineTextAlignment(.center)
         }
     }
