@@ -42,7 +42,7 @@ struct SignInView: View {
                 .frame(width: 56, height: 56)
                 .accessibilityHidden(true)
             Text("Temida")
-                .font(.temidaSerif(34))
+                .font(.temidaHeadline(34))
                 .accessibilityAddTraits(.isHeader)
             Text("Your case, in one brief.")
                 .foregroundStyle(.secondary)
