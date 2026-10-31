@@ -2,7 +2,6 @@ import SwiftUI
 
 struct MoneyTabView: View {
     @Environment(Store.self) private var store
-    @State private var barsVisible = false
     // Column widths grow with the text size so the table wraps instead of clipping.
     @ScaledMetric(relativeTo: .footnote) private var rangeWidth: CGFloat = 90
     @ScaledMetric(relativeTo: .footnote) private var noteWidth: CGFloat = 110
@@ -54,8 +53,7 @@ struct MoneyTabView: View {
                                     ZStack(alignment: .leading) {
                                         RoundedRectangle(cornerRadius: 2).fill(Color.secondary.opacity(0.15)).frame(height: 4)
                                         RoundedRectangle(cornerRadius: 2).fill(s.accentColor)
-                                            .frame(width: barsVisible ? geo.size.width * s.probability : 0, height: 4)
-                                            .animation(.easeOut(duration: 0.9).delay(Double(idx) * 0.12), value: barsVisible)
+                                            .frame(width: geo.size.width * s.probability, height: 4)
                                     }
                                 }.frame(height: 4)
                                 .accessibilityHidden(true)
@@ -72,7 +70,6 @@ struct MoneyTabView: View {
                     }
                     .padding(Spacing.mdPlus)
                     .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 16))
-                    .onAppear { barsVisible = true }
 
                     SectionCard("Per-head damages stack") {
                         VStack(spacing: 0) {
