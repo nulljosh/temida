@@ -16,7 +16,7 @@ cd "$(dirname "${BASH_SOURCE[0]}")"
 # _headers must stay in this list. It carries the CSP and HSTS; Pages only applies it if
 # it is actually uploaded, and for months it was not, so the site shipped with no CSP at all.
 PUBLISH=(auth.js i18n.js i18n.json spark-client.js script.js style.css sw.js manifest.json _headers
-         icon.svg favicon.svg apple-touch-icon.png privacy.html tokens.css og.png footer-shader.js webmcp.js author.js temida.svg th-head.webp th-scales.webp th-sword.webp)
+         icon.svg favicon.svg apple-touch-icon.png privacy.html tokens.css og.png footer-shader.js webmcp.js author.js hero.css hero.js temida.svg th-head.webp th-scales.webp th-sword.webp)
 
 STAGE="$(mktemp -d)"
 trap 'rm -rf "$STAGE"' EXIT

@@ -1229,7 +1229,7 @@ body[data-theme="dark"] { --th-field: #1a2133; }
 .lp-hero.th-hero { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); align-items: center; gap: 40px; text-align: left;
   background: var(--th-field); color: var(--th-on); padding: clamp(40px, 7vh, 88px) var(--th-wide) clamp(56px, 9vh, 104px); position: relative; overflow: hidden; isolation: isolate; }
 .th-kicker { margin: 0 0 18px; font-size: 15px; color: var(--th-soft); }
-.lp-hero.th-hero .lp-h1 { font-size: clamp(52px, 7.6vw, 108px); font-weight: 400; line-height: .96; letter-spacing: -0.03em; max-width: 8ch; margin: 0 0 28px; color: var(--th-on); }
+.lp-hero.th-hero .lp-h1 { font-size: clamp(52px, 7.6vw, 108px); font-weight: 700; line-height: .96; letter-spacing: -0.03em; max-width: 8ch; margin: 0 0 28px; color: var(--th-on); }
 .lp-hero.th-hero .lp-lead { margin: 0 0 32px; max-width: 34ch; color: rgba(242, 242, 242, .78); }
 .lp-hero.th-hero .lp-cta-row { justify-content: flex-start; }
 .th-hero .lp-appstore { color: rgba(242, 242, 242, .78); }
@@ -1246,18 +1246,18 @@ body[data-theme="dark"] { --th-field: #1a2133; }
 .lp-demo.th-dark { max-width: none; margin: 0; padding: 0 var(--th-wide) 72px; }
 .lp-demo.th-dark video { max-width: 1040px; margin: 0 auto; border-color: rgba(242, 242, 242, .14); box-shadow: 0 32px 80px -32px rgba(0, 0, 0, .55); }
 .th-plats { text-align: center; padding: 24px 20px 96px; }
-.th-plats h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.025em; line-height: 1; margin: 0 0 12px; }
+.th-plats h2 { font-family: var(--font-display); font-weight: 700; font-size: clamp(40px, 6vw, 76px); letter-spacing: -0.025em; line-height: 1; margin: 0 0 12px; }
 .th-plats > p { margin: 0 0 48px; color: rgba(242, 242, 242, .75); }
 .th-plat-row { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; max-width: 900px; margin: 0 auto; }
 .th-plat-row > div { display: flex; flex-direction: column; align-items: center; gap: 10px; }
 .th-plat-row small { font-size: 13px; color: var(--th-soft); }
-.th-plat-row b { font-family: var(--font-display); font-weight: 400; font-size: 40px; letter-spacing: -0.02em; }
+.th-plat-row b { font-family: var(--font-display); font-weight: 700; font-size: 40px; letter-spacing: -0.02em; }
 .th-plat-row span.lp-btn { opacity: .7; cursor: default; }
 
-#features .lp-sec-head h2 { font-size: clamp(48px, 7vw, 92px); font-weight: 400; letter-spacing: -0.03em; color: var(--accent); text-align: left; }
+#features .lp-sec-head h2 { font-size: clamp(48px, 7vw, 92px); font-weight: 700; letter-spacing: -0.03em; color: var(--accent); text-align: left; }
 #features .lp-sec-head { text-align: left; }
 #features .lp-card-no { font-size: 13px; font-weight: 600; color: var(--accent); letter-spacing: 0; }
-#features .lp-card h3 { font-family: var(--font-display); font-weight: 400; font-size: 30px; letter-spacing: -0.02em; color: var(--accent); }
+#features .lp-card h3 { font-family: var(--font-display); font-weight: 600; font-size: 30px; letter-spacing: -0.02em; color: var(--accent); }
 .lp-foot-shader { height: clamp(140px, 21vw, 300px); margin-top: 24px; }
 
 @media (max-width: 820px) {
@@ -1270,7 +1270,6 @@ body[data-theme="dark"] { --th-field: #1a2133; }
 /* Full-bleed hero; the rays sit behind the goddess herself. */
 .lp-hero.th-hero { max-width: none; width: 100%; margin: 0; box-sizing: border-box; }
 .lp-hero.th-hero .lp-h1 { max-width: none; }
-.lp-hero.th-hero .lp-hero-bg { display: none; }
 .th-art::before { content: ""; position: absolute; left: 50%; top: 44%; width: 150%; aspect-ratio: 1; z-index: -1; pointer-events: none;
   background: repeating-conic-gradient(from 0deg, rgba(232, 236, 246, .2) 0deg .4deg, transparent .4deg 4.5deg);
   -webkit-mask-image: radial-gradient(circle, transparent 12%, #000 24%, transparent 66%); mask-image: radial-gradient(circle, transparent 12%, #000 24%, transparent 66%);
@@ -1290,7 +1289,7 @@ body[data-theme="dark"] { --th-field: #1a2133; }
 .th-fine a { color: inherit; }
 @media (max-width: 420px) { .th-icons { gap: 8px; } .th-icons a, .th-icons button { width: 44px; height: 44px; } }
 .th-plat-row a.lp-btn { text-decoration: none; }
-.lp-final h2 { font-weight: 400; font-size: clamp(40px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 1; }
+.lp-final h2 { font-weight: 700; font-size: clamp(40px, 5.5vw, 72px); letter-spacing: -0.025em; line-height: 1; }
 .th-plats { padding-top: 88px; }
 /* Hero depth on scroll (--sy is the overlay's scroll offset, set by the inline script, capped at 900).
    Rays: back layer, slow ambient spin plus a scroll turn and swell. Goddess: middle layer, lags the page.
@@ -1325,7 +1324,7 @@ footer a { color: inherit; }
 .th-plat-row .th-badge { margin-top: 0; }
 .th-fine { text-wrap: balance; }
 /* Sign-in card matches the landing: serif headline, plain sentence-case support text. */
-#authModal .auth-title { font-family: var(--font-display); font-weight: 400; font-size: 34px; letter-spacing: -0.015em; line-height: 1.1; }
+#authModal .auth-title { font-family: var(--font-display); font-weight: 700; font-size: 34px; letter-spacing: -0.015em; line-height: 1.1; }
 #authModal .auth-sub, #authModal .auth-footer { letter-spacing: 0; font-size: 14px; }
 /* Brand rule: labels are sentence case, never spaced-out capitals. One override for every caps label the app shell had. */
 .auth-btn,

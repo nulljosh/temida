@@ -2,7 +2,7 @@
 // It used to be cache-first over a precached list pinned to '?v=40'. That serves a stale
 // '/' and stylesheet forever unless every deploy bumps CACHE *and* every asset's ?v — which
 // is exactly how the site shipped correct CSS that nobody could see. Never go back to it.
-const CACHE = 'themis-v1';
+const CACHE = 'themis-v2';
 
 self.addEventListener('install', () => self.skipWaiting());
 

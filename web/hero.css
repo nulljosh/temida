@@ -1,0 +1,33 @@
+/* Hero: Temida's own brief behind the copy. Sample cards (no real case) play the app's screens: a deadline counting
+   down, the money range, tasks ticking off, the timeline filling in. Blended into the field; parallax via --sy. */
+.lp-hero.th-hero { display: grid; grid-template-columns: minmax(0, 1fr); place-items: center; text-align: center; min-height: calc(100svh - 64px); padding: 64px 20px; overflow: hidden; }
+.lp-hero.th-hero::before { content: ""; position: absolute; inset: 0; z-index: 1; pointer-events: none; background: radial-gradient(ellipse 58% 58% at 50% 50%, var(--th-field) 52%, transparent 100%); }
+.lp-hero.th-hero::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 28%; z-index: 1; pointer-events: none; background: linear-gradient(transparent, var(--th-field)); }
+.lp-hero.th-hero .lp-hero-bg { display: block; inset: 0; width: auto; aspect-ratio: auto; z-index: 0; background: none; -webkit-mask-image: none; mask-image: none;
+  transform: translate3d(0, calc(var(--sy, 0) * 0.45px), 0); }
+.lp-hero.th-hero .lp-hero-copy { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center;
+  transform: translate3d(0, calc(var(--sy, 0) * 0.2px), 0); opacity: calc(1 - var(--sy, 0) / 630); }
+.lp-hero.th-hero .lp-h1 { font-weight: 700; max-width: 10ch; margin: 0 auto 28px; letter-spacing: -0.035em; }
+.lp-hero.th-hero .lp-lead { margin: 0 auto 32px; }
+.lp-hero.th-hero .lp-cta-row { justify-content: center; }
+.bwall { height: 100%; max-width: 1440px; margin: 0 auto; padding: 24px; display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 220px; gap: 22px; align-content: center; opacity: .72; text-align: left; }
+.bc { background: color-mix(in srgb, var(--th-on) 7%, var(--th-field)); border: 1px solid rgba(242, 242, 242, .12); border-radius: 20px; padding: 18px 22px; overflow: hidden; display: flex; flex-direction: column; gap: 10px; color: var(--th-on); }
+.bc-hd { font-size: 13px; font-weight: 600; color: var(--th-soft); display: flex; justify-content: space-between; }
+.bc-big { font-size: 22px; line-height: 27px; font-weight: 700; letter-spacing: -0.015em; }
+.bc-sub { font-size: 14px; color: var(--th-soft); font-variant-numeric: tabular-nums; }
+.bc-bar { height: 8px; border-radius: 999px; background: rgba(242, 242, 242, .12); overflow: hidden; }
+.bc-bar i { display: block; height: 100%; width: 0; background: var(--th-on); border-radius: inherit; transition: width .9s ease; }
+.bc-row { display: grid; grid-template-columns: 60px 1fr auto; align-items: center; gap: 10px; font-size: 14px; }
+.bc-row b { font-variant-numeric: tabular-nums; font-weight: 700; }
+.bc-li { display: flex; align-items: center; gap: 10px; font-size: 15px; line-height: 20px; opacity: .45; transition: opacity .3s; }
+.bc-li::before { content: ""; flex: none; width: 16px; height: 16px; border-radius: 50%; border: 2px solid var(--th-soft); box-sizing: border-box; transition: background .3s, border-color .3s; }
+.bc-li.on { opacity: 1; }
+.bc-li.done::before { background: var(--th-on); border-color: var(--th-on); }
+.bc-li span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bc-li em { font-style: normal; color: var(--th-soft); font-variant-numeric: tabular-nums; min-width: 44px; }
+.bc-txt { font-size: 16px; line-height: 23px; }
+.bc-txt::after { content: ""; display: inline-block; width: 2px; height: 1em; margin-left: 2px; vertical-align: -2px; background: var(--th-on); animation: bc-caret 1s steps(1) infinite; }
+@keyframes bc-caret { 50% { opacity: 0; } }
+@media (max-width: 900px) { .bwall { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .bwall { grid-template-columns: 1fr; padding: 16px; grid-auto-rows: 200px; opacity: .5; } .lp-hero.th-hero::before { background: radial-gradient(ellipse 120% 46% at 50% 50%, var(--th-field) 62%, transparent 100%); } }
+@media (prefers-reduced-motion: reduce) { .bc-bar i, .bc-li, .bc-li::before { transition: none; } .bc-txt::after { animation: none; } }
