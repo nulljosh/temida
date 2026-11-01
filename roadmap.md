@@ -109,7 +109,6 @@ Added Sign in with Apple to iOS and macOS (commit 3ffc4c4). Added Google sign-in
 
 ## From Apple Notes (imported 2026-08-25)
 
-- [ ] Background should match the animation style used in Bookrank etc., the animation behind the hero, or even the entire page background.
   Partly done 2026-08-28: the landing now has a page-wide animated background (drifting ruled paper,
   panning column grid, two slow graphite blooms). Still needs a side-by-side against Bookrank , 
   heyitsmejosh.com was unreachable from the session that built this, so the match is unverified.
