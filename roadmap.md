@@ -70,7 +70,6 @@ Left open from the fix:
 - [ ] App Privacy declaration, ASC-web-UI-only, no public API. Needs a browser session via `/asc-web-relogin` to check/fix (should be: data collected = email + user content, linked to user, not tracking).
 
 ## Open
-- [x] (11-01: already right. The live app info says https://temida.jaybulb.com/privacy, which serves; privacy.html only redirects there. Opening the app info left iOS and Mac 1.1.1 drafts that Apple will not delete, so the next release uses 1.1.1) App Store privacy policy URL: should be https://temida.jaybulb.com/privacy.html, which is already in the local metadata. Frozen until next version ships (app-info only editable during staged versions). (2026-09-02: Apple rejects the PATCH, "privacyPolicyUrl can not be modified in the current state", while the only app-info is READY_FOR_DISTRIBUTION; local metadata is already correct, so it goes through on the next version bump via metadata apply) [2026-10-04: README updated with signed-out web screenshots; Apple sign-in sheet dismiss bug fixed.]
 - [ ] Needs app + website screenshots for README and splash screen, needs a simulator/browser session.
 
 ## App Store screenshots (queued 2026-08-11)
