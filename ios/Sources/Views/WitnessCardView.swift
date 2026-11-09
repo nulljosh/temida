@@ -25,19 +25,11 @@ struct WitnessCardView: View {
                 .accessibilityElement(children: .combine)
             }
 
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 5) {
-                    ForEach(witness.tags, id: \.self) { tag in
-                        Text(tag)
-                            .font(.temidaText(13).weight(.semibold))
-                            .foregroundStyle(.briefGreen)
-                            .padding(.horizontal, 8)
-                            .padding(.vertical, 3)
-                            .background(Color.briefGreen.opacity(0.12), in: Capsule())
-                            .overlay(Capsule().stroke(Color.secondary.opacity(0.2)))
-                    }
-                }
-            }
+            // ponytail: wrapped text, not capsules; a real flow layout if chips ever need to tap
+            Text(witness.tags.joined(separator: "  ·  "))
+                .font(.temidaText(13).weight(.semibold))
+                .foregroundStyle(.briefGreen)
+                .fixedSize(horizontal: false, vertical: true)
 
             VStack(alignment: .leading, spacing: 6) {
                 Text("Statement, verbatim")
