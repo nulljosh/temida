@@ -133,4 +133,3 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 ## Ingested 2026-10-30
 
 ## Ingested 2026-11-14
-- [x] (Note "Temida") Needs account recovery. Already live on web, iOS and macOS (Forgot password, then the web reset page); re-verified 2026-11-15.
