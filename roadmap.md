@@ -133,3 +133,9 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 ## Ingested 2026-10-30
 
 ## Ingested 2026-11-14
+
+## Ingested 2026-11-16
+- [ ] (Note "Temida") Set the password to something easier, and confirm a record Joshua mentioned is on his account. Details are private: vault wiki `temida.md`, Ingested 2026-11-16.
+- [ ] (Note "Temida") Why are there Claude design elements in the project? Remove them.
+- [ ] (Temida web) How does Joshua log into his account on the web? He signs in with Apple; where is that button on web? Web also has no logout.
+- [ ] (Temida iOS) The app shows redundant headers: the case name appears three times at the top of the Case tab (nav title, card caption, card title). Screenshot is local only, it holds case details: notes/attachments/2026-11-16/22176-1.png.
