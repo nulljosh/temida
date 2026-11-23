@@ -139,3 +139,9 @@ litigate has no CI, the Swift tests in tests/main.swift would need a macOS runne
 - [ ] (Note "Temida") Why are there Claude design elements in the project? Remove them.
 - [ ] (Temida web) How does Joshua log into his account on the web? He signs in with Apple; where is that button on web? Web also has no logout.
 - [ ] (Temida iOS) The app shows redundant headers: the case name appears three times at the top of the Case tab (nav title, card caption, card title). Screenshot is local only, it holds case details: notes/attachments/2026-11-16/22176-1.png.
+
+## Ingested 2026-11-23
+
+- [ ] **Temida**: I keep losing account login.
+  - I thought it was login with apple.
+  - But that is not working.
